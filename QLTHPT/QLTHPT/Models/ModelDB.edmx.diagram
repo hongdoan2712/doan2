@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d664312550074f6f852febef76b2af44" Name="Diagram1">
+        <EntityTypeShape EntityType="acomptec_qlthptModel.BACLUONG" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CANBO" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIET_CHUCVU" Width="1.5" PointX="9.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHITIETDANHGIA" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUCVU" Width="1.5" PointX="7.5" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.CHUYENNGANH" Width="1.5" PointX="10.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.COQUAN" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.COSOVATCHAT" Width="1.5" PointX="14" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.DANTOC" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HINHTHUC" Width="1.5" PointX="10.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCKY" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.HOCSINH" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONG" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHENTHUONGCB" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KHOI" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUAT" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.KYLUATCB" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.LOP" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.MONHOC" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.NAMHOC" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.NGACHLUONG" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.PHONGHOC" Width="1.5" PointX="11.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.QUANHUYEN" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.SODANHGIA" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIDAYHOC" Width="1.5" PointX="11.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THIETBIGIANGDAY" Width="1.5" PointX="11.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THOIKHOABIEU" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THONGTINDAOTAO" Width="1.5" PointX="12.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THONGTINLUONG" Width="1.5" PointX="9.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.THU" Width="1.5" PointX="7.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TIETHOC" Width="1.5" PointX="7.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTHANH" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.TINHTRANG" Width="1.5" PointX="11.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.UpdateImage" Width="1.5" PointX="11.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.VANBANG" Width="1.5" PointX="10.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="acomptec_qlthptModel.XAPHUONG" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_BACLUONGTHONGTINLUONG" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CANBOCHITIET_CHUCVU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CANBOTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CANBOTHONGTINDAOTAO" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CANBOTHONGTINLUONG" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_COQUANCANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_KHENTHUONGCBCANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_KYLUATCBCANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CHUCVUCHITIET_CHUCVU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CHITIETDANHGIAMONHOC" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_HOCSINHCHITIETDANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_SODANHGIACHITIETDANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_CHUYENNGANHTHONGTINDAOTAO" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_PHONGHOCCOSOVATCHAT" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_THIETBIDAYHOCCOSOVATCHAT" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_THIETBIGIANGDAYCOSOVATCHAT" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_TINHTRANGCOSOVATCHAT" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_DANTOCHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_THONGTINDAOTAOHINHTHUC" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_HOCKYTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_KHENTHUONGHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_KHOIHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_KYLUATHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_LOPHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_QUANHUYENHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_TINHTHANHHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_XAPHUONGHOCSINH" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_LOPTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_MONHOCTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_NAMHOCSODANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_NGACHLUONGTHONGTINLUONG" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_THUTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_TIETHOCTHOIKHOABIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="acomptec_qlthptModel.FK_VANBANGTHONGTINDAOTAO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

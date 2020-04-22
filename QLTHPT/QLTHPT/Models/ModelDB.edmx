@@ -1,0 +1,2204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="acomptec_qlthptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BACLUONG">
+          <Key>
+            <PropertyRef Name="BL_MA" />
+          </Key>
+          <Property Name="BL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BL_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CANBO">
+          <Key>
+            <PropertyRef Name="CB_MA" />
+          </Key>
+          <Property Name="CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CB_HOTEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CB_GIOITINH" Type="varchar" MaxLength="10" />
+          <Property Name="CB_DIACHI" Type="nvarchar" MaxLength="200" />
+          <Property Name="CB_NGAYSINH" Type="datetime" />
+          <Property Name="CB_CMND" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="COQUAN_CQ_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KYLUATCB_KLCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="KHENTHUONGCB_KTCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHITIET_CHUCVU">
+          <Key>
+            <PropertyRef Name="CT_CV_ID" />
+          </Key>
+          <Property Name="CT_CV_ID" Type="time" Precision="7" Nullable="false" />
+          <Property Name="CHUCVU_CV_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHITIETDANHGIA">
+          <Key>
+            <PropertyRef Name="CTDG_MA" />
+          </Key>
+          <Property Name="CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CTDG_NGAYDG" Type="datetime" />
+          <Property Name="SODANHGIA_SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HOCSINH_HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHUCVU">
+          <Key>
+            <PropertyRef Name="CV_MA" />
+          </Key>
+          <Property Name="CV_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CV_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CHUYENNGANH">
+          <Key>
+            <PropertyRef Name="CN_MA" />
+          </Key>
+          <Property Name="CN_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CN_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="COQUAN">
+          <Key>
+            <PropertyRef Name="CQ_MA" />
+          </Key>
+          <Property Name="CQ_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CQ_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="COSOVATCHAT">
+          <Key>
+            <PropertyRef Name="CSVC_MA" />
+          </Key>
+          <Property Name="CSVC_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CSVC_SOLUONG" Type="int" Nullable="false" />
+          <Property Name="PHONGHOC_PH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="THIETBIGIANGDAY_TBGD_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="THIETBIDAYHOC_TBDH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TINHTRANG_TT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DANTOC">
+          <Key>
+            <PropertyRef Name="DT_MA" />
+          </Key>
+          <Property Name="DT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DT_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HINHTHUC">
+          <Key>
+            <PropertyRef Name="HT_MA" />
+          </Key>
+          <Property Name="HT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HT_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HOCKY">
+          <Key>
+            <PropertyRef Name="HK_MA" />
+          </Key>
+          <Property Name="HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HK_TEN" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOCSINH">
+          <Key>
+            <PropertyRef Name="HS_MA" />
+          </Key>
+          <Property Name="HS_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HS_HOTEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HS_GIOITINH" Type="varchar" MaxLength="10" />
+          <Property Name="HS_NGAYSINH" Type="datetime" Nullable="false" />
+          <Property Name="HS_TONGIAO" Type="nvarchar" MaxLength="20" />
+          <Property Name="TINHTHANH_TT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="XAPHUONG_XP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KYLUAT_KL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KHENTHUONG_KT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="QUANHUYEN_QH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DANTOC_DT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KHOI_KHOI_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KHENTHUONG">
+          <Key>
+            <PropertyRef Name="KT_MA" />
+          </Key>
+          <Property Name="KT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KT_THANHTICH" Type="nvarchar" MaxLength="50" />
+          <Property Name="KT_NGAYKHENTHUONG" Type="datetime" />
+          <Property Name="KT_GHICHU" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="KHENTHUONGCB">
+          <Key>
+            <PropertyRef Name="KTCB_MA" />
+          </Key>
+          <Property Name="KTCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="KTCB_NGAY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="KTCB_THANHTICH" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KHOI">
+          <Key>
+            <PropertyRef Name="KHOI_MA" />
+          </Key>
+          <Property Name="KHOI_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KHOI_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="KYLUAT">
+          <Key>
+            <PropertyRef Name="KL_MA" />
+          </Key>
+          <Property Name="KL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="KL_HINHTHUC" Type="nvarchar" MaxLength="50" />
+          <Property Name="KL_NGAYKYLUAT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="KYLUATCB">
+          <Key>
+            <PropertyRef Name="KLCB_MA" />
+          </Key>
+          <Property Name="KLCB_MA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="KLCB_NGAY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="KLCB_HT" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="LOP_MA" />
+          </Key>
+          <Property Name="LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOP_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MONHOC">
+          <Key>
+            <PropertyRef Name="MH_MA" />
+          </Key>
+          <Property Name="MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MH_TEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NAMHOC">
+          <Key>
+            <PropertyRef Name="NH_MA" />
+          </Key>
+          <Property Name="NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NH_NAMHOC" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NGACHLUONG">
+          <Key>
+            <PropertyRef Name="NL_MA" />
+          </Key>
+          <Property Name="NL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NL_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PHONGHOC">
+          <Key>
+            <PropertyRef Name="PH_MA" />
+          </Key>
+          <Property Name="PH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PH_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QUANHUYEN">
+          <Key>
+            <PropertyRef Name="QH_MA" />
+          </Key>
+          <Property Name="QH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="QH_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SODANHGIA">
+          <Key>
+            <PropertyRef Name="SDG_MA" />
+          </Key>
+          <Property Name="SDG_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SDG_DIEM" Type="varchar" MaxLength="10" />
+          <Property Name="SDG_GHICHU" Type="nvarchar" MaxLength="50" />
+          <Property Name="NAMHOC_NH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THIETBIDAYHOC">
+          <Key>
+            <PropertyRef Name="TBDH_MA" />
+          </Key>
+          <Property Name="TBDH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TBDH_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THIETBIGIANGDAY">
+          <Key>
+            <PropertyRef Name="TBGD_MA" />
+          </Key>
+          <Property Name="TBGD_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TBGD_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="TKB_MA" />
+          </Key>
+          <Property Name="TKB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOP_LOP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MONHOC_MH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="THU_THU_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TIETHOC_TH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HOCKY_HK_MA" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THONGTINDAOTAO">
+          <Key>
+            <PropertyRef Name="TTDT_MA" />
+          </Key>
+          <Property Name="TTDT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HINHTHUCs_HT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CHUYENNGANH_CN_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="VANBANG_VB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THONGTINLUONG">
+          <Key>
+            <PropertyRef Name="TTL_MA" />
+          </Key>
+          <Property Name="TTL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TTL_NGAYNHANLUONG" Type="nvarchar" MaxLength="50" />
+          <Property Name="TTL_HESOLUONG" Type="varchar" MaxLength="10" />
+          <Property Name="BACLUONG_BL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NGACHLUONG_NL_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THU">
+          <Key>
+            <PropertyRef Name="THU_MA" />
+          </Key>
+          <Property Name="THU_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="THU_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIETHOC">
+          <Key>
+            <PropertyRef Name="TH_MA" />
+          </Key>
+          <Property Name="TH_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TH_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TINHTHANH">
+          <Key>
+            <PropertyRef Name="TT_MA" />
+          </Key>
+          <Property Name="TT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TT_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TINHTRANG">
+          <Key>
+            <PropertyRef Name="TT_MA" />
+          </Key>
+          <Property Name="TT_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TT_MOTA" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="UpdateImages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Image_url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_im" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="VANBANG">
+          <Key>
+            <PropertyRef Name="VB_MA" />
+          </Key>
+          <Property Name="VB_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="VB_TEN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="XAPHUONG">
+          <Key>
+            <PropertyRef Name="XP_MA" />
+          </Key>
+          <Property Name="XP_MA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="XP_TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BACLUONGTHONGTINLUONG">
+          <End Role="BACLUONG" Type="Self.BACLUONG" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BACLUONG">
+              <PropertyRef Name="BL_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="BACLUONG_BL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOCHITIET_CHUCVU">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHOIKHOABIEU">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHONGTINDAOTAO">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHONGTINLUONG">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETDANHGIAMONHOC">
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="1" />
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHITIETDANHGIA">
+              <PropertyRef Name="CTDG_MA" />
+            </Principal>
+            <Dependent Role="MONHOC">
+              <PropertyRef Name="CHITIETDANHGIA_CTDG_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHUCVUCHITIET_CHUCVU">
+          <End Role="CHUCVU" Type="Self.CHUCVU" Multiplicity="1" />
+          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUCVU">
+              <PropertyRef Name="CV_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CHUCVU_CV_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHUYENNGANHTHONGTINDAOTAO">
+          <End Role="CHUYENNGANH" Type="Self.CHUYENNGANH" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUYENNGANH">
+              <PropertyRef Name="CN_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CHUYENNGANH_CN_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COQUANCANBO">
+          <End Role="COQUAN" Type="Self.COQUAN" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COQUAN">
+              <PropertyRef Name="CQ_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="COQUAN_CQ_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DANTOCHOCSINH">
+          <End Role="DANTOC" Type="Self.DANTOC" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DANTOC">
+              <PropertyRef Name="DT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="DANTOC_DT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOCKYTHOIKHOABIEU">
+          <End Role="HOCKY" Type="Self.HOCKY" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOCKY">
+              <PropertyRef Name="HK_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="HOCKY_HK_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOCSINHCHITIETDANHGIA">
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOCSINH">
+              <PropertyRef Name="HS_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="HOCSINH_HS_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHENTHUONGCBCANBO">
+          <End Role="KHENTHUONGCB" Type="Self.KHENTHUONGCB" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHENTHUONGCB">
+              <PropertyRef Name="KTCB_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="KHENTHUONGCB_KTCB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHENTHUONGHOCSINH">
+          <End Role="KHENTHUONG" Type="Self.KHENTHUONG" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHENTHUONG">
+              <PropertyRef Name="KT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KHENTHUONG_KT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHOIHOCSINH">
+          <End Role="KHOI" Type="Self.KHOI" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOI">
+              <PropertyRef Name="KHOI_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KHOI_KHOI_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KYLUATCBCANBO">
+          <End Role="KYLUATCB" Type="Self.KYLUATCB" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYLUATCB">
+              <PropertyRef Name="KLCB_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="KYLUATCB_KLCB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KYLUATHOCSINH">
+          <End Role="KYLUAT" Type="Self.KYLUAT" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYLUAT">
+              <PropertyRef Name="KL_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KYLUAT_KL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOPHOCSINH">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="LOP_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="LOP_LOP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOPTHOIKHOABIEU">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="LOP_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="LOP_LOP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MONHOCTHOIKHOABIEU">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MH_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MONHOC_MH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NAMHOCSODANHGIA">
+          <End Role="NAMHOC" Type="Self.NAMHOC" Multiplicity="1" />
+          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAMHOC">
+              <PropertyRef Name="NH_MA" />
+            </Principal>
+            <Dependent Role="SODANHGIA">
+              <PropertyRef Name="NAMHOC_NH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NGACHLUONGTHONGTINLUONG">
+          <End Role="NGACHLUONG" Type="Self.NGACHLUONG" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGACHLUONG">
+              <PropertyRef Name="NL_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="NGACHLUONG_NL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PHONGHOCCOSOVATCHAT">
+          <End Role="PHONGHOC" Type="Self.PHONGHOC" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONGHOC">
+              <PropertyRef Name="PH_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="PHONGHOC_PH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUANHUYENHOCSINH">
+          <End Role="QUANHUYEN" Type="Self.QUANHUYEN" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QUANHUYEN">
+              <PropertyRef Name="QH_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="QUANHUYEN_QH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SODANHGIACHITIETDANHGIA">
+          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SODANHGIA">
+              <PropertyRef Name="SDG_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="SODANHGIA_SDG_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THIETBIDAYHOCCOSOVATCHAT">
+          <End Role="THIETBIDAYHOC" Type="Self.THIETBIDAYHOC" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THIETBIDAYHOC">
+              <PropertyRef Name="TBDH_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="THIETBIDAYHOC_TBDH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THIETBIGIANGDAYCOSOVATCHAT">
+          <End Role="THIETBIGIANGDAY" Type="Self.THIETBIGIANGDAY" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THIETBIGIANGDAY">
+              <PropertyRef Name="TBGD_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="THIETBIGIANGDAY_TBGD_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THONGTINDAOTAOHINHTHUC">
+          <End Role="HINHTHUC" Type="Self.HINHTHUC" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HINHTHUC">
+              <PropertyRef Name="HT_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="HINHTHUCs_HT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THUTHOIKHOABIEU">
+          <End Role="THU" Type="Self.THU" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THU">
+              <PropertyRef Name="THU_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="THU_THU_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIETHOCTHOIKHOABIEU">
+          <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIETHOC">
+              <PropertyRef Name="TH_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="TIETHOC_TH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TINHTHANHHOCSINH">
+          <End Role="TINHTHANH" Type="Self.TINHTHANH" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TINHTHANH">
+              <PropertyRef Name="TT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="TINHTHANH_TT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TINHTRANGCOSOVATCHAT">
+          <End Role="TINHTRANG" Type="Self.TINHTRANG" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TINHTRANG">
+              <PropertyRef Name="TT_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="TINHTRANG_TT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VANBANGTHONGTINDAOTAO">
+          <End Role="VANBANG" Type="Self.VANBANG" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VANBANG">
+              <PropertyRef Name="VB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="VANBANG_VB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XAPHUONGHOCSINH">
+          <End Role="XAPHUONG" Type="Self.XAPHUONG" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XAPHUONG">
+              <PropertyRef Name="XP_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="XAPHUONG_XP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="acomptec_qlthptModelStoreContainer">
+          <EntitySet Name="BACLUONG" EntityType="Self.BACLUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CANBO" EntityType="Self.CANBO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHITIET_CHUCVU" EntityType="Self.CHITIET_CHUCVU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHITIETDANHGIA" EntityType="Self.CHITIETDANHGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUCVU" EntityType="Self.CHUCVU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUYENNGANH" EntityType="Self.CHUYENNGANH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COQUAN" EntityType="Self.COQUAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COSOVATCHAT" EntityType="Self.COSOVATCHAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DANTOC" EntityType="Self.DANTOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HINHTHUC" EntityType="Self.HINHTHUC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOCKY" EntityType="Self.HOCKY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOCSINH" EntityType="Self.HOCSINH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHENTHUONG" EntityType="Self.KHENTHUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHENTHUONGCB" EntityType="Self.KHENTHUONGCB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHOI" EntityType="Self.KHOI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KYLUAT" EntityType="Self.KYLUAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KYLUATCB" EntityType="Self.KYLUATCB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NAMHOC" EntityType="Self.NAMHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NGACHLUONG" EntityType="Self.NGACHLUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHONGHOC" EntityType="Self.PHONGHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QUANHUYEN" EntityType="Self.QUANHUYEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SODANHGIA" EntityType="Self.SODANHGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THIETBIDAYHOC" EntityType="Self.THIETBIDAYHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THIETBIGIANGDAY" EntityType="Self.THIETBIGIANGDAY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THOIKHOABIEU" EntityType="Self.THOIKHOABIEU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THONGTINDAOTAO" EntityType="Self.THONGTINDAOTAO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THONGTINLUONG" EntityType="Self.THONGTINLUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THU" EntityType="Self.THU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIETHOC" EntityType="Self.TIETHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TINHTHANH" EntityType="Self.TINHTHANH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UpdateImages" EntityType="Self.UpdateImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VANBANG" EntityType="Self.VANBANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="XAPHUONG" EntityType="Self.XAPHUONG" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BACLUONGTHONGTINLUONG" Association="Self.FK_BACLUONGTHONGTINLUONG">
+            <End Role="BACLUONG" EntitySet="BACLUONG" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOCHITIET_CHUCVU" Association="Self.FK_CANBOCHITIET_CHUCVU">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHOIKHOABIEU" Association="Self.FK_CANBOTHOIKHOABIEU">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHONGTINDAOTAO" Association="Self.FK_CANBOTHONGTINDAOTAO">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHONGTINLUONG" Association="Self.FK_CANBOTHONGTINLUONG">
+            <End Role="CANBO" EntitySet="CANBO" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETDANHGIAMONHOC" Association="Self.FK_CHITIETDANHGIAMONHOC">
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
+            <End Role="MONHOC" EntitySet="MONHOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUCVUCHITIET_CHUCVU" Association="Self.FK_CHUCVUCHITIET_CHUCVU">
+            <End Role="CHUCVU" EntitySet="CHUCVU" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUYENNGANHTHONGTINDAOTAO" Association="Self.FK_CHUYENNGANHTHONGTINDAOTAO">
+            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANH" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COQUANCANBO" Association="Self.FK_COQUANCANBO">
+            <End Role="COQUAN" EntitySet="COQUAN" />
+            <End Role="CANBO" EntitySet="CANBO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DANTOCHOCSINH" Association="Self.FK_DANTOCHOCSINH">
+            <End Role="DANTOC" EntitySet="DANTOC" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCKYTHOIKHOABIEU" Association="Self.FK_HOCKYTHOIKHOABIEU">
+            <End Role="HOCKY" EntitySet="HOCKY" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCSINHCHITIETDANHGIA" Association="Self.FK_HOCSINHCHITIETDANHGIA">
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHENTHUONGCBCANBO" Association="Self.FK_KHENTHUONGCBCANBO">
+            <End Role="KHENTHUONGCB" EntitySet="KHENTHUONGCB" />
+            <End Role="CANBO" EntitySet="CANBO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHENTHUONGHOCSINH" Association="Self.FK_KHENTHUONGHOCSINH">
+            <End Role="KHENTHUONG" EntitySet="KHENTHUONG" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHOIHOCSINH" Association="Self.FK_KHOIHOCSINH">
+            <End Role="KHOI" EntitySet="KHOI" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KYLUATCBCANBO" Association="Self.FK_KYLUATCBCANBO">
+            <End Role="KYLUATCB" EntitySet="KYLUATCB" />
+            <End Role="CANBO" EntitySet="CANBO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KYLUATHOCSINH" Association="Self.FK_KYLUATHOCSINH">
+            <End Role="KYLUAT" EntitySet="KYLUAT" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOPHOCSINH" Association="Self.FK_LOPHOCSINH">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOPTHOIKHOABIEU" Association="Self.FK_LOPTHOIKHOABIEU">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MONHOCTHOIKHOABIEU" Association="Self.FK_MONHOCTHOIKHOABIEU">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NAMHOCSODANHGIA" Association="Self.FK_NAMHOCSODANHGIA">
+            <End Role="NAMHOC" EntitySet="NAMHOC" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NGACHLUONGTHONGTINLUONG" Association="Self.FK_NGACHLUONGTHONGTINLUONG">
+            <End Role="NGACHLUONG" EntitySet="NGACHLUONG" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PHONGHOCCOSOVATCHAT" Association="Self.FK_PHONGHOCCOSOVATCHAT">
+            <End Role="PHONGHOC" EntitySet="PHONGHOC" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUANHUYENHOCSINH" Association="Self.FK_QUANHUYENHOCSINH">
+            <End Role="QUANHUYEN" EntitySet="QUANHUYEN" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SODANHGIACHITIETDANHGIA" Association="Self.FK_SODANHGIACHITIETDANHGIA">
+            <End Role="SODANHGIA" EntitySet="SODANHGIA" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THIETBIDAYHOCCOSOVATCHAT" Association="Self.FK_THIETBIDAYHOCCOSOVATCHAT">
+            <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOC" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THIETBIGIANGDAYCOSOVATCHAT" Association="Self.FK_THIETBIGIANGDAYCOSOVATCHAT">
+            <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAY" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THONGTINDAOTAOHINHTHUC" Association="Self.FK_THONGTINDAOTAOHINHTHUC">
+            <End Role="HINHTHUC" EntitySet="HINHTHUC" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THUTHOIKHOABIEU" Association="Self.FK_THUTHOIKHOABIEU">
+            <End Role="THU" EntitySet="THU" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIETHOCTHOIKHOABIEU" Association="Self.FK_TIETHOCTHOIKHOABIEU">
+            <End Role="TIETHOC" EntitySet="TIETHOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TINHTHANHHOCSINH" Association="Self.FK_TINHTHANHHOCSINH">
+            <End Role="TINHTHANH" EntitySet="TINHTHANH" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TINHTRANGCOSOVATCHAT" Association="Self.FK_TINHTRANGCOSOVATCHAT">
+            <End Role="TINHTRANG" EntitySet="TINHTRANG" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VANBANGTHONGTINDAOTAO" Association="Self.FK_VANBANGTHONGTINDAOTAO">
+            <End Role="VANBANG" EntitySet="VANBANG" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XAPHUONGHOCSINH" Association="Self.FK_XAPHUONGHOCSINH">
+            <End Role="XAPHUONG" EntitySet="XAPHUONG" />
+            <End Role="HOCSINH" EntitySet="HOCSINH" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="acomptec_qlthptModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BACLUONG">
+          <Key>
+            <PropertyRef Name="BL_MA" />
+          </Key>
+          <Property Name="BL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BL_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="THONGTINLUONGs" Relationship="Self.FK_BACLUONGTHONGTINLUONG" FromRole="BACLUONG" ToRole="THONGTINLUONG" />
+        </EntityType>
+        <EntityType Name="CANBO">
+          <Key>
+            <PropertyRef Name="CB_MA" />
+          </Key>
+          <Property Name="CB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CB_HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CB_GIOITINH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CB_DIACHI" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CB_NGAYSINH" Type="DateTime" Precision="3" />
+          <Property Name="CB_CMND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COQUAN_CQ_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KYLUATCB_KLCB_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KHENTHUONGCB_KTCB_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CHITIET_CHUCVU" Relationship="Self.FK_CANBOCHITIET_CHUCVU" FromRole="CANBO" ToRole="CHITIET_CHUCVU" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_CANBOTHOIKHOABIEU" FromRole="CANBO" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="Self.FK_CANBOTHONGTINDAOTAO" FromRole="CANBO" ToRole="THONGTINDAOTAO" />
+          <NavigationProperty Name="THONGTINLUONGs" Relationship="Self.FK_CANBOTHONGTINLUONG" FromRole="CANBO" ToRole="THONGTINLUONG" />
+          <NavigationProperty Name="COQUAN" Relationship="Self.FK_COQUANCANBO" FromRole="CANBO" ToRole="COQUAN" />
+          <NavigationProperty Name="KHENTHUONGCB" Relationship="Self.FK_KHENTHUONGCBCANBO" FromRole="CANBO" ToRole="KHENTHUONGCB" />
+          <NavigationProperty Name="KYLUATCB" Relationship="Self.FK_KYLUATCBCANBO" FromRole="CANBO" ToRole="KYLUATCB" />
+        </EntityType>
+        <EntityType Name="CHITIET_CHUCVU">
+          <Key>
+            <PropertyRef Name="CT_CV_ID" />
+          </Key>
+          <Property Name="CT_CV_ID" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="CHUCVU_CV_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CANBO" Relationship="Self.FK_CANBOCHITIET_CHUCVU" FromRole="CHITIET_CHUCVU" ToRole="CANBO" />
+          <NavigationProperty Name="CHUCVU" Relationship="Self.FK_CHUCVUCHITIET_CHUCVU" FromRole="CHITIET_CHUCVU" ToRole="CHUCVU" />
+        </EntityType>
+        <EntityType Name="CHITIETDANHGIA">
+          <Key>
+            <PropertyRef Name="CTDG_MA" />
+          </Key>
+          <Property Name="CTDG_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTDG_NGAYDG" Type="DateTime" Precision="3" />
+          <Property Name="SODANHGIA_SDG_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOCSINH_HS_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MONHOCs" Relationship="Self.FK_CHITIETDANHGIAMONHOC" FromRole="CHITIETDANHGIA" ToRole="MONHOC" />
+          <NavigationProperty Name="HOCSINH" Relationship="Self.FK_HOCSINHCHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="HOCSINH" />
+          <NavigationProperty Name="SODANHGIA" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="CHITIETDANHGIA" ToRole="SODANHGIA" />
+        </EntityType>
+        <EntityType Name="CHUCVU">
+          <Key>
+            <PropertyRef Name="CV_MA" />
+          </Key>
+          <Property Name="CV_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CV_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHITIET_CHUCVU" Relationship="Self.FK_CHUCVUCHITIET_CHUCVU" FromRole="CHUCVU" ToRole="CHITIET_CHUCVU" />
+        </EntityType>
+        <EntityType Name="CHUYENNGANH">
+          <Key>
+            <PropertyRef Name="CN_MA" />
+          </Key>
+          <Property Name="CN_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CN_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="Self.FK_CHUYENNGANHTHONGTINDAOTAO" FromRole="CHUYENNGANH" ToRole="THONGTINDAOTAO" />
+        </EntityType>
+        <EntityType Name="COQUAN">
+          <Key>
+            <PropertyRef Name="CQ_MA" />
+          </Key>
+          <Property Name="CQ_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CQ_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CANBOes" Relationship="Self.FK_COQUANCANBO" FromRole="COQUAN" ToRole="CANBO" />
+        </EntityType>
+        <EntityType Name="COSOVATCHAT">
+          <Key>
+            <PropertyRef Name="CSVC_MA" />
+          </Key>
+          <Property Name="CSVC_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CSVC_SOLUONG" Type="Int32" Nullable="false" />
+          <Property Name="PHONGHOC_PH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="THIETBIGIANGDAY_TBGD_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="THIETBIDAYHOC_TBDH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TINHTRANG_TT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PHONGHOC" Relationship="Self.FK_PHONGHOCCOSOVATCHAT" FromRole="COSOVATCHAT" ToRole="PHONGHOC" />
+          <NavigationProperty Name="THIETBIDAYHOC" Relationship="Self.FK_THIETBIDAYHOCCOSOVATCHAT" FromRole="COSOVATCHAT" ToRole="THIETBIDAYHOC" />
+          <NavigationProperty Name="THIETBIGIANGDAY" Relationship="Self.FK_THIETBIGIANGDAYCOSOVATCHAT" FromRole="COSOVATCHAT" ToRole="THIETBIGIANGDAY" />
+          <NavigationProperty Name="TINHTRANG" Relationship="Self.FK_TINHTRANGCOSOVATCHAT" FromRole="COSOVATCHAT" ToRole="TINHTRANG" />
+        </EntityType>
+        <EntityType Name="DANTOC">
+          <Key>
+            <PropertyRef Name="DT_MA" />
+          </Key>
+          <Property Name="DT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DT_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_DANTOCHOCSINH" FromRole="DANTOC" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="HINHTHUC">
+          <Key>
+            <PropertyRef Name="HT_MA" />
+          </Key>
+          <Property Name="HT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HT_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="Self.FK_THONGTINDAOTAOHINHTHUC" FromRole="HINHTHUC" ToRole="THONGTINDAOTAO" />
+        </EntityType>
+        <EntityType Name="HOCKY">
+          <Key>
+            <PropertyRef Name="HK_MA" />
+          </Key>
+          <Property Name="HK_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HK_TEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_HOCKYTHOIKHOABIEU" FromRole="HOCKY" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="HOCSINH">
+          <Key>
+            <PropertyRef Name="HS_MA" />
+          </Key>
+          <Property Name="HS_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HS_HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HS_GIOITINH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HS_NGAYSINH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HS_TONGIAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TINHTHANH_TT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="XAPHUONG_XP_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KYLUAT_KL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KHENTHUONG_KT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANHUYEN_QH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DANTOC_DT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOP_LOP_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KHOI_KHOI_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="Self.FK_HOCSINHCHITIETDANHGIA" FromRole="HOCSINH" ToRole="CHITIETDANHGIA" />
+          <NavigationProperty Name="DANTOC" Relationship="Self.FK_DANTOCHOCSINH" FromRole="HOCSINH" ToRole="DANTOC" />
+          <NavigationProperty Name="KHENTHUONG" Relationship="Self.FK_KHENTHUONGHOCSINH" FromRole="HOCSINH" ToRole="KHENTHUONG" />
+          <NavigationProperty Name="KHOI" Relationship="Self.FK_KHOIHOCSINH" FromRole="HOCSINH" ToRole="KHOI" />
+          <NavigationProperty Name="KYLUAT" Relationship="Self.FK_KYLUATHOCSINH" FromRole="HOCSINH" ToRole="KYLUAT" />
+          <NavigationProperty Name="LOP" Relationship="Self.FK_LOPHOCSINH" FromRole="HOCSINH" ToRole="LOP" />
+          <NavigationProperty Name="QUANHUYEN" Relationship="Self.FK_QUANHUYENHOCSINH" FromRole="HOCSINH" ToRole="QUANHUYEN" />
+          <NavigationProperty Name="TINHTHANH" Relationship="Self.FK_TINHTHANHHOCSINH" FromRole="HOCSINH" ToRole="TINHTHANH" />
+          <NavigationProperty Name="XAPHUONG" Relationship="Self.FK_XAPHUONGHOCSINH" FromRole="HOCSINH" ToRole="XAPHUONG" />
+        </EntityType>
+        <EntityType Name="KHENTHUONG">
+          <Key>
+            <PropertyRef Name="KT_MA" />
+          </Key>
+          <Property Name="KT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KT_THANHTICH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KT_NGAYKHENTHUONG" Type="DateTime" Precision="3" />
+          <Property Name="KT_GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_KHENTHUONGHOCSINH" FromRole="KHENTHUONG" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="KHENTHUONGCB">
+          <Key>
+            <PropertyRef Name="KTCB_MA" />
+          </Key>
+          <Property Name="KTCB_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KTCB_NGAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KTCB_THANHTICH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CANBOes" Relationship="Self.FK_KHENTHUONGCBCANBO" FromRole="KHENTHUONGCB" ToRole="CANBO" />
+        </EntityType>
+        <EntityType Name="KHOI">
+          <Key>
+            <PropertyRef Name="KHOI_MA" />
+          </Key>
+          <Property Name="KHOI_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KHOI_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_KHOIHOCSINH" FromRole="KHOI" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="KYLUAT">
+          <Key>
+            <PropertyRef Name="KL_MA" />
+          </Key>
+          <Property Name="KL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KL_HINHTHUC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KL_NGAYKYLUAT" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_KYLUATHOCSINH" FromRole="KYLUAT" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="KYLUATCB">
+          <Key>
+            <PropertyRef Name="KLCB_MA" />
+          </Key>
+          <Property Name="KLCB_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KLCB_NGAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KLCB_HT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CANBOes" Relationship="Self.FK_KYLUATCBCANBO" FromRole="KYLUATCB" ToRole="CANBO" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="LOP_MA" />
+          </Key>
+          <Property Name="LOP_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOP_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_LOPHOCSINH" FromRole="LOP" ToRole="HOCSINH" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_LOPTHOIKHOABIEU" FromRole="LOP" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="MONHOC">
+          <Key>
+            <PropertyRef Name="MH_MA" />
+          </Key>
+          <Property Name="MH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CHITIETDANHGIA_CTDG_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CHITIETDANHGIA" Relationship="Self.FK_CHITIETDANHGIAMONHOC" FromRole="MONHOC" ToRole="CHITIETDANHGIA" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_MONHOCTHOIKHOABIEU" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="NAMHOC">
+          <Key>
+            <PropertyRef Name="NH_MA" />
+          </Key>
+          <Property Name="NH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NH_NAMHOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SODANHGIAs" Relationship="Self.FK_NAMHOCSODANHGIA" FromRole="NAMHOC" ToRole="SODANHGIA" />
+        </EntityType>
+        <EntityType Name="NGACHLUONG">
+          <Key>
+            <PropertyRef Name="NL_MA" />
+          </Key>
+          <Property Name="NL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NL_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="THONGTINLUONGs" Relationship="Self.FK_NGACHLUONGTHONGTINLUONG" FromRole="NGACHLUONG" ToRole="THONGTINLUONG" />
+        </EntityType>
+        <EntityType Name="PHONGHOC">
+          <Key>
+            <PropertyRef Name="PH_MA" />
+          </Key>
+          <Property Name="PH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COSOVATCHATs" Relationship="Self.FK_PHONGHOCCOSOVATCHAT" FromRole="PHONGHOC" ToRole="COSOVATCHAT" />
+        </EntityType>
+        <EntityType Name="QUANHUYEN">
+          <Key>
+            <PropertyRef Name="QH_MA" />
+          </Key>
+          <Property Name="QH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_QUANHUYENHOCSINH" FromRole="QUANHUYEN" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="SODANHGIA">
+          <Key>
+            <PropertyRef Name="SDG_MA" />
+          </Key>
+          <Property Name="SDG_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SDG_DIEM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SDG_GHICHU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMHOC_NH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CHITIETDANHGIAs" Relationship="Self.FK_SODANHGIACHITIETDANHGIA" FromRole="SODANHGIA" ToRole="CHITIETDANHGIA" />
+          <NavigationProperty Name="NAMHOC" Relationship="Self.FK_NAMHOCSODANHGIA" FromRole="SODANHGIA" ToRole="NAMHOC" />
+        </EntityType>
+        <EntityType Name="THIETBIDAYHOC">
+          <Key>
+            <PropertyRef Name="TBDH_MA" />
+          </Key>
+          <Property Name="TBDH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TBDH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COSOVATCHATs" Relationship="Self.FK_THIETBIDAYHOCCOSOVATCHAT" FromRole="THIETBIDAYHOC" ToRole="COSOVATCHAT" />
+        </EntityType>
+        <EntityType Name="THIETBIGIANGDAY">
+          <Key>
+            <PropertyRef Name="TBGD_MA" />
+          </Key>
+          <Property Name="TBGD_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TBGD_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COSOVATCHATs" Relationship="Self.FK_THIETBIGIANGDAYCOSOVATCHAT" FromRole="THIETBIGIANGDAY" ToRole="COSOVATCHAT" />
+        </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="TKB_MA" />
+          </Key>
+          <Property Name="TKB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOP_LOP_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MONHOC_MH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="THU_THU_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TIETHOC_TH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOCKY_HK_MA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CANBO" Relationship="Self.FK_CANBOTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="CANBO" />
+          <NavigationProperty Name="HOCKY" Relationship="Self.FK_HOCKYTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="HOCKY" />
+          <NavigationProperty Name="LOP" Relationship="Self.FK_LOPTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="LOP" />
+          <NavigationProperty Name="MONHOC" Relationship="Self.FK_MONHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="MONHOC" />
+          <NavigationProperty Name="THU" Relationship="Self.FK_THUTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="THU" />
+          <NavigationProperty Name="TIETHOC" Relationship="Self.FK_TIETHOCTHOIKHOABIEU" FromRole="THOIKHOABIEU" ToRole="TIETHOC" />
+        </EntityType>
+        <EntityType Name="THONGTINDAOTAO">
+          <Key>
+            <PropertyRef Name="TTDT_MA" />
+          </Key>
+          <Property Name="TTDT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HINHTHUCs_HT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CHUYENNGANH_CN_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VANBANG_VB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CANBO" Relationship="Self.FK_CANBOTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CANBO" />
+          <NavigationProperty Name="CHUYENNGANH" Relationship="Self.FK_CHUYENNGANHTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="CHUYENNGANH" />
+          <NavigationProperty Name="HINHTHUC" Relationship="Self.FK_THONGTINDAOTAOHINHTHUC" FromRole="THONGTINDAOTAO" ToRole="HINHTHUC" />
+          <NavigationProperty Name="VANBANG" Relationship="Self.FK_VANBANGTHONGTINDAOTAO" FromRole="THONGTINDAOTAO" ToRole="VANBANG" />
+        </EntityType>
+        <EntityType Name="THONGTINLUONG">
+          <Key>
+            <PropertyRef Name="TTL_MA" />
+          </Key>
+          <Property Name="TTL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TTL_NGAYNHANLUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TTL_HESOLUONG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BACLUONG_BL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGACHLUONG_NL_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANBO_CB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BACLUONG" Relationship="Self.FK_BACLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="BACLUONG" />
+          <NavigationProperty Name="CANBO" Relationship="Self.FK_CANBOTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="CANBO" />
+          <NavigationProperty Name="NGACHLUONG" Relationship="Self.FK_NGACHLUONGTHONGTINLUONG" FromRole="THONGTINLUONG" ToRole="NGACHLUONG" />
+        </EntityType>
+        <EntityType Name="THU">
+          <Key>
+            <PropertyRef Name="THU_MA" />
+          </Key>
+          <Property Name="THU_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="THU_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_THUTHOIKHOABIEU" FromRole="THU" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="TIETHOC">
+          <Key>
+            <PropertyRef Name="TH_MA" />
+          </Key>
+          <Property Name="TH_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TH_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK_TIETHOCTHOIKHOABIEU" FromRole="TIETHOC" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="TINHTHANH">
+          <Key>
+            <PropertyRef Name="TT_MA" />
+          </Key>
+          <Property Name="TT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TT_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_TINHTHANHHOCSINH" FromRole="TINHTHANH" ToRole="HOCSINH" />
+        </EntityType>
+        <EntityType Name="TINHTRANG">
+          <Key>
+            <PropertyRef Name="TT_MA" />
+          </Key>
+          <Property Name="TT_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TT_MOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="COSOVATCHATs" Relationship="Self.FK_TINHTRANGCOSOVATCHAT" FromRole="TINHTRANG" ToRole="COSOVATCHAT" />
+        </EntityType>
+        <EntityType Name="UpdateImage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image_url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_im" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VANBANG">
+          <Key>
+            <PropertyRef Name="VB_MA" />
+          </Key>
+          <Property Name="VB_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VB_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="THONGTINDAOTAOs" Relationship="Self.FK_VANBANGTHONGTINDAOTAO" FromRole="VANBANG" ToRole="THONGTINDAOTAO" />
+        </EntityType>
+        <EntityType Name="XAPHUONG">
+          <Key>
+            <PropertyRef Name="XP_MA" />
+          </Key>
+          <Property Name="XP_MA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="XP_TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_XAPHUONGHOCSINH" FromRole="XAPHUONG" ToRole="HOCSINH" />
+        </EntityType>
+        <Association Name="FK_BACLUONGTHONGTINLUONG">
+          <End Role="BACLUONG" Type="Self.BACLUONG" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BACLUONG">
+              <PropertyRef Name="BL_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="BACLUONG_BL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOCHITIET_CHUCVU">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHOIKHOABIEU">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHONGTINDAOTAO">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANBOTHONGTINLUONG">
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANBO">
+              <PropertyRef Name="CB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="CANBO_CB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COQUANCANBO">
+          <End Role="COQUAN" Type="Self.COQUAN" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COQUAN">
+              <PropertyRef Name="CQ_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="COQUAN_CQ_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHENTHUONGCBCANBO">
+          <End Role="KHENTHUONGCB" Type="Self.KHENTHUONGCB" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHENTHUONGCB">
+              <PropertyRef Name="KTCB_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="KHENTHUONGCB_KTCB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KYLUATCBCANBO">
+          <End Role="KYLUATCB" Type="Self.KYLUATCB" Multiplicity="1" />
+          <End Role="CANBO" Type="Self.CANBO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYLUATCB">
+              <PropertyRef Name="KLCB_MA" />
+            </Principal>
+            <Dependent Role="CANBO">
+              <PropertyRef Name="KYLUATCB_KLCB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHUCVUCHITIET_CHUCVU">
+          <End Role="CHUCVU" Type="Self.CHUCVU" Multiplicity="1" />
+          <End Role="CHITIET_CHUCVU" Type="Self.CHITIET_CHUCVU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUCVU">
+              <PropertyRef Name="CV_MA" />
+            </Principal>
+            <Dependent Role="CHITIET_CHUCVU">
+              <PropertyRef Name="CHUCVU_CV_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETDANHGIAMONHOC">
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="1" />
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHITIETDANHGIA">
+              <PropertyRef Name="CTDG_MA" />
+            </Principal>
+            <Dependent Role="MONHOC">
+              <PropertyRef Name="CHITIETDANHGIA_CTDG_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOCSINHCHITIETDANHGIA">
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOCSINH">
+              <PropertyRef Name="HS_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="HOCSINH_HS_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SODANHGIACHITIETDANHGIA">
+          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="1" />
+          <End Role="CHITIETDANHGIA" Type="Self.CHITIETDANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SODANHGIA">
+              <PropertyRef Name="SDG_MA" />
+            </Principal>
+            <Dependent Role="CHITIETDANHGIA">
+              <PropertyRef Name="SODANHGIA_SDG_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHUYENNGANHTHONGTINDAOTAO">
+          <End Role="CHUYENNGANH" Type="Self.CHUYENNGANH" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUYENNGANH">
+              <PropertyRef Name="CN_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="CHUYENNGANH_CN_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PHONGHOCCOSOVATCHAT">
+          <End Role="PHONGHOC" Type="Self.PHONGHOC" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONGHOC">
+              <PropertyRef Name="PH_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="PHONGHOC_PH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THIETBIDAYHOCCOSOVATCHAT">
+          <End Role="THIETBIDAYHOC" Type="Self.THIETBIDAYHOC" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THIETBIDAYHOC">
+              <PropertyRef Name="TBDH_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="THIETBIDAYHOC_TBDH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THIETBIGIANGDAYCOSOVATCHAT">
+          <End Role="THIETBIGIANGDAY" Type="Self.THIETBIGIANGDAY" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THIETBIGIANGDAY">
+              <PropertyRef Name="TBGD_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="THIETBIGIANGDAY_TBGD_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TINHTRANGCOSOVATCHAT">
+          <End Role="TINHTRANG" Type="Self.TINHTRANG" Multiplicity="1" />
+          <End Role="COSOVATCHAT" Type="Self.COSOVATCHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TINHTRANG">
+              <PropertyRef Name="TT_MA" />
+            </Principal>
+            <Dependent Role="COSOVATCHAT">
+              <PropertyRef Name="TINHTRANG_TT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DANTOCHOCSINH">
+          <End Role="DANTOC" Type="Self.DANTOC" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DANTOC">
+              <PropertyRef Name="DT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="DANTOC_DT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THONGTINDAOTAOHINHTHUC">
+          <End Role="HINHTHUC" Type="Self.HINHTHUC" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HINHTHUC">
+              <PropertyRef Name="HT_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="HINHTHUCs_HT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOCKYTHOIKHOABIEU">
+          <End Role="HOCKY" Type="Self.HOCKY" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOCKY">
+              <PropertyRef Name="HK_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="HOCKY_HK_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHENTHUONGHOCSINH">
+          <End Role="KHENTHUONG" Type="Self.KHENTHUONG" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHENTHUONG">
+              <PropertyRef Name="KT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KHENTHUONG_KT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KHOIHOCSINH">
+          <End Role="KHOI" Type="Self.KHOI" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOI">
+              <PropertyRef Name="KHOI_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KHOI_KHOI_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KYLUATHOCSINH">
+          <End Role="KYLUAT" Type="Self.KYLUAT" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYLUAT">
+              <PropertyRef Name="KL_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="KYLUAT_KL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOPHOCSINH">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="LOP_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="LOP_LOP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUANHUYENHOCSINH">
+          <End Role="QUANHUYEN" Type="Self.QUANHUYEN" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QUANHUYEN">
+              <PropertyRef Name="QH_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="QUANHUYEN_QH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TINHTHANHHOCSINH">
+          <End Role="TINHTHANH" Type="Self.TINHTHANH" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TINHTHANH">
+              <PropertyRef Name="TT_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="TINHTHANH_TT_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XAPHUONGHOCSINH">
+          <End Role="XAPHUONG" Type="Self.XAPHUONG" Multiplicity="1" />
+          <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XAPHUONG">
+              <PropertyRef Name="XP_MA" />
+            </Principal>
+            <Dependent Role="HOCSINH">
+              <PropertyRef Name="XAPHUONG_XP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOPTHOIKHOABIEU">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="LOP_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="LOP_LOP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MONHOCTHOIKHOABIEU">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MH_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MONHOC_MH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NAMHOCSODANHGIA">
+          <End Role="NAMHOC" Type="Self.NAMHOC" Multiplicity="1" />
+          <End Role="SODANHGIA" Type="Self.SODANHGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAMHOC">
+              <PropertyRef Name="NH_MA" />
+            </Principal>
+            <Dependent Role="SODANHGIA">
+              <PropertyRef Name="NAMHOC_NH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NGACHLUONGTHONGTINLUONG">
+          <End Role="NGACHLUONG" Type="Self.NGACHLUONG" Multiplicity="1" />
+          <End Role="THONGTINLUONG" Type="Self.THONGTINLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGACHLUONG">
+              <PropertyRef Name="NL_MA" />
+            </Principal>
+            <Dependent Role="THONGTINLUONG">
+              <PropertyRef Name="NGACHLUONG_NL_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THUTHOIKHOABIEU">
+          <End Role="THU" Type="Self.THU" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THU">
+              <PropertyRef Name="THU_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="THU_THU_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIETHOCTHOIKHOABIEU">
+          <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIETHOC">
+              <PropertyRef Name="TH_MA" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="TIETHOC_TH_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VANBANGTHONGTINDAOTAO">
+          <End Role="VANBANG" Type="Self.VANBANG" Multiplicity="1" />
+          <End Role="THONGTINDAOTAO" Type="Self.THONGTINDAOTAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VANBANG">
+              <PropertyRef Name="VB_MA" />
+            </Principal>
+            <Dependent Role="THONGTINDAOTAO">
+              <PropertyRef Name="VANBANG_VB_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="acomptec_qlthptEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BACLUONGs" EntityType="Self.BACLUONG" />
+          <EntitySet Name="CANBOes" EntityType="Self.CANBO" />
+          <EntitySet Name="CHITIET_CHUCVU" EntityType="Self.CHITIET_CHUCVU" />
+          <EntitySet Name="CHITIETDANHGIAs" EntityType="Self.CHITIETDANHGIA" />
+          <EntitySet Name="CHUCVUs" EntityType="Self.CHUCVU" />
+          <EntitySet Name="CHUYENNGANHs" EntityType="Self.CHUYENNGANH" />
+          <EntitySet Name="COQUANs" EntityType="Self.COQUAN" />
+          <EntitySet Name="COSOVATCHATs" EntityType="Self.COSOVATCHAT" />
+          <EntitySet Name="DANTOCs" EntityType="Self.DANTOC" />
+          <EntitySet Name="HINHTHUCs" EntityType="Self.HINHTHUC" />
+          <EntitySet Name="HOCKies" EntityType="Self.HOCKY" />
+          <EntitySet Name="HOCSINHs" EntityType="Self.HOCSINH" />
+          <EntitySet Name="KHENTHUONGs" EntityType="Self.KHENTHUONG" />
+          <EntitySet Name="KHENTHUONGCBs" EntityType="Self.KHENTHUONGCB" />
+          <EntitySet Name="KHOIs" EntityType="Self.KHOI" />
+          <EntitySet Name="KYLUATs" EntityType="Self.KYLUAT" />
+          <EntitySet Name="KYLUATCBs" EntityType="Self.KYLUATCB" />
+          <EntitySet Name="LOPs" EntityType="Self.LOP" />
+          <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+          <EntitySet Name="NAMHOCs" EntityType="Self.NAMHOC" />
+          <EntitySet Name="NGACHLUONGs" EntityType="Self.NGACHLUONG" />
+          <EntitySet Name="PHONGHOCs" EntityType="Self.PHONGHOC" />
+          <EntitySet Name="QUANHUYENs" EntityType="Self.QUANHUYEN" />
+          <EntitySet Name="SODANHGIAs" EntityType="Self.SODANHGIA" />
+          <EntitySet Name="THIETBIDAYHOCs" EntityType="Self.THIETBIDAYHOC" />
+          <EntitySet Name="THIETBIGIANGDAYs" EntityType="Self.THIETBIGIANGDAY" />
+          <EntitySet Name="THOIKHOABIEUx" EntityType="Self.THOIKHOABIEU" />
+          <EntitySet Name="THONGTINDAOTAOs" EntityType="Self.THONGTINDAOTAO" />
+          <EntitySet Name="THONGTINLUONGs" EntityType="Self.THONGTINLUONG" />
+          <EntitySet Name="THUs" EntityType="Self.THU" />
+          <EntitySet Name="TIETHOCs" EntityType="Self.TIETHOC" />
+          <EntitySet Name="TINHTHANHs" EntityType="Self.TINHTHANH" />
+          <EntitySet Name="TINHTRANGs" EntityType="Self.TINHTRANG" />
+          <EntitySet Name="UpdateImages" EntityType="Self.UpdateImage" />
+          <EntitySet Name="VANBANGs" EntityType="Self.VANBANG" />
+          <EntitySet Name="XAPHUONGs" EntityType="Self.XAPHUONG" />
+          <AssociationSet Name="FK_BACLUONGTHONGTINLUONG" Association="Self.FK_BACLUONGTHONGTINLUONG">
+            <End Role="BACLUONG" EntitySet="BACLUONGs" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOCHITIET_CHUCVU" Association="Self.FK_CANBOCHITIET_CHUCVU">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHOIKHOABIEU" Association="Self.FK_CANBOTHOIKHOABIEU">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHONGTINDAOTAO" Association="Self.FK_CANBOTHONGTINDAOTAO">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANBOTHONGTINLUONG" Association="Self.FK_CANBOTHONGTINLUONG">
+            <End Role="CANBO" EntitySet="CANBOes" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COQUANCANBO" Association="Self.FK_COQUANCANBO">
+            <End Role="COQUAN" EntitySet="COQUANs" />
+            <End Role="CANBO" EntitySet="CANBOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHENTHUONGCBCANBO" Association="Self.FK_KHENTHUONGCBCANBO">
+            <End Role="KHENTHUONGCB" EntitySet="KHENTHUONGCBs" />
+            <End Role="CANBO" EntitySet="CANBOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KYLUATCBCANBO" Association="Self.FK_KYLUATCBCANBO">
+            <End Role="KYLUATCB" EntitySet="KYLUATCBs" />
+            <End Role="CANBO" EntitySet="CANBOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUCVUCHITIET_CHUCVU" Association="Self.FK_CHUCVUCHITIET_CHUCVU">
+            <End Role="CHUCVU" EntitySet="CHUCVUs" />
+            <End Role="CHITIET_CHUCVU" EntitySet="CHITIET_CHUCVU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETDANHGIAMONHOC" Association="Self.FK_CHITIETDANHGIAMONHOC">
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCSINHCHITIETDANHGIA" Association="Self.FK_HOCSINHCHITIETDANHGIA">
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SODANHGIACHITIETDANHGIA" Association="Self.FK_SODANHGIACHITIETDANHGIA">
+            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+            <End Role="CHITIETDANHGIA" EntitySet="CHITIETDANHGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUYENNGANHTHONGTINDAOTAO" Association="Self.FK_CHUYENNGANHTHONGTINDAOTAO">
+            <End Role="CHUYENNGANH" EntitySet="CHUYENNGANHs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PHONGHOCCOSOVATCHAT" Association="Self.FK_PHONGHOCCOSOVATCHAT">
+            <End Role="PHONGHOC" EntitySet="PHONGHOCs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THIETBIDAYHOCCOSOVATCHAT" Association="Self.FK_THIETBIDAYHOCCOSOVATCHAT">
+            <End Role="THIETBIDAYHOC" EntitySet="THIETBIDAYHOCs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THIETBIGIANGDAYCOSOVATCHAT" Association="Self.FK_THIETBIGIANGDAYCOSOVATCHAT">
+            <End Role="THIETBIGIANGDAY" EntitySet="THIETBIGIANGDAYs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TINHTRANGCOSOVATCHAT" Association="Self.FK_TINHTRANGCOSOVATCHAT">
+            <End Role="TINHTRANG" EntitySet="TINHTRANGs" />
+            <End Role="COSOVATCHAT" EntitySet="COSOVATCHATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DANTOCHOCSINH" Association="Self.FK_DANTOCHOCSINH">
+            <End Role="DANTOC" EntitySet="DANTOCs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THONGTINDAOTAOHINHTHUC" Association="Self.FK_THONGTINDAOTAOHINHTHUC">
+            <End Role="HINHTHUC" EntitySet="HINHTHUCs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOCKYTHOIKHOABIEU" Association="Self.FK_HOCKYTHOIKHOABIEU">
+            <End Role="HOCKY" EntitySet="HOCKies" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHENTHUONGHOCSINH" Association="Self.FK_KHENTHUONGHOCSINH">
+            <End Role="KHENTHUONG" EntitySet="KHENTHUONGs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHOIHOCSINH" Association="Self.FK_KHOIHOCSINH">
+            <End Role="KHOI" EntitySet="KHOIs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KYLUATHOCSINH" Association="Self.FK_KYLUATHOCSINH">
+            <End Role="KYLUAT" EntitySet="KYLUATs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOPHOCSINH" Association="Self.FK_LOPHOCSINH">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUANHUYENHOCSINH" Association="Self.FK_QUANHUYENHOCSINH">
+            <End Role="QUANHUYEN" EntitySet="QUANHUYENs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TINHTHANHHOCSINH" Association="Self.FK_TINHTHANHHOCSINH">
+            <End Role="TINHTHANH" EntitySet="TINHTHANHs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XAPHUONGHOCSINH" Association="Self.FK_XAPHUONGHOCSINH">
+            <End Role="XAPHUONG" EntitySet="XAPHUONGs" />
+            <End Role="HOCSINH" EntitySet="HOCSINHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOPTHOIKHOABIEU" Association="Self.FK_LOPTHOIKHOABIEU">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MONHOCTHOIKHOABIEU" Association="Self.FK_MONHOCTHOIKHOABIEU">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NAMHOCSODANHGIA" Association="Self.FK_NAMHOCSODANHGIA">
+            <End Role="NAMHOC" EntitySet="NAMHOCs" />
+            <End Role="SODANHGIA" EntitySet="SODANHGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NGACHLUONGTHONGTINLUONG" Association="Self.FK_NGACHLUONGTHONGTINLUONG">
+            <End Role="NGACHLUONG" EntitySet="NGACHLUONGs" />
+            <End Role="THONGTINLUONG" EntitySet="THONGTINLUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THUTHOIKHOABIEU" Association="Self.FK_THUTHOIKHOABIEU">
+            <End Role="THU" EntitySet="THUs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIETHOCTHOIKHOABIEU" Association="Self.FK_TIETHOCTHOIKHOABIEU">
+            <End Role="TIETHOC" EntitySet="TIETHOCs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VANBANGTHONGTINDAOTAO" Association="Self.FK_VANBANGTHONGTINDAOTAO">
+            <End Role="VANBANG" EntitySet="VANBANGs" />
+            <End Role="THONGTINDAOTAO" EntitySet="THONGTINDAOTAOs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="acomptec_qlthptModelStoreContainer" CdmEntityContainer="acomptec_qlthptEntities">
+          <EntitySetMapping Name="BACLUONGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.BACLUONG">
+              <MappingFragment StoreEntitySet="BACLUONG">
+                <ScalarProperty Name="BL_MA" ColumnName="BL_MA" />
+                <ScalarProperty Name="BL_TEN" ColumnName="BL_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CANBOes">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.CANBO">
+              <MappingFragment StoreEntitySet="CANBO">
+                <ScalarProperty Name="CB_MA" ColumnName="CB_MA" />
+                <ScalarProperty Name="CB_HOTEN" ColumnName="CB_HOTEN" />
+                <ScalarProperty Name="CB_GIOITINH" ColumnName="CB_GIOITINH" />
+                <ScalarProperty Name="CB_DIACHI" ColumnName="CB_DIACHI" />
+                <ScalarProperty Name="CB_NGAYSINH" ColumnName="CB_NGAYSINH" />
+                <ScalarProperty Name="CB_CMND" ColumnName="CB_CMND" />
+                <ScalarProperty Name="COQUAN_CQ_MA" ColumnName="COQUAN_CQ_MA" />
+                <ScalarProperty Name="KYLUATCB_KLCB_MA" ColumnName="KYLUATCB_KLCB_MA" />
+                <ScalarProperty Name="KHENTHUONGCB_KTCB_MA" ColumnName="KHENTHUONGCB_KTCB_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIET_CHUCVU">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIET_CHUCVU">
+              <MappingFragment StoreEntitySet="CHITIET_CHUCVU">
+                <ScalarProperty Name="CT_CV_ID" ColumnName="CT_CV_ID" />
+                <ScalarProperty Name="CHUCVU_CV_MA" ColumnName="CHUCVU_CV_MA" />
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETDANHGIAs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.CHITIETDANHGIA">
+              <MappingFragment StoreEntitySet="CHITIETDANHGIA">
+                <ScalarProperty Name="CTDG_MA" ColumnName="CTDG_MA" />
+                <ScalarProperty Name="CTDG_NGAYDG" ColumnName="CTDG_NGAYDG" />
+                <ScalarProperty Name="SODANHGIA_SDG_MA" ColumnName="SODANHGIA_SDG_MA" />
+                <ScalarProperty Name="HOCSINH_HS_MA" ColumnName="HOCSINH_HS_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUCVUs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.CHUCVU">
+              <MappingFragment StoreEntitySet="CHUCVU">
+                <ScalarProperty Name="CV_MA" ColumnName="CV_MA" />
+                <ScalarProperty Name="CV_TEN" ColumnName="CV_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUYENNGANHs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.CHUYENNGANH">
+              <MappingFragment StoreEntitySet="CHUYENNGANH">
+                <ScalarProperty Name="CN_MA" ColumnName="CN_MA" />
+                <ScalarProperty Name="CN_TEN" ColumnName="CN_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COQUANs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.COQUAN">
+              <MappingFragment StoreEntitySet="COQUAN">
+                <ScalarProperty Name="CQ_MA" ColumnName="CQ_MA" />
+                <ScalarProperty Name="CQ_TEN" ColumnName="CQ_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COSOVATCHATs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.COSOVATCHAT">
+              <MappingFragment StoreEntitySet="COSOVATCHAT">
+                <ScalarProperty Name="CSVC_MA" ColumnName="CSVC_MA" />
+                <ScalarProperty Name="CSVC_SOLUONG" ColumnName="CSVC_SOLUONG" />
+                <ScalarProperty Name="PHONGHOC_PH_MA" ColumnName="PHONGHOC_PH_MA" />
+                <ScalarProperty Name="THIETBIGIANGDAY_TBGD_MA" ColumnName="THIETBIGIANGDAY_TBGD_MA" />
+                <ScalarProperty Name="THIETBIDAYHOC_TBDH_MA" ColumnName="THIETBIDAYHOC_TBDH_MA" />
+                <ScalarProperty Name="TINHTRANG_TT_MA" ColumnName="TINHTRANG_TT_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DANTOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.DANTOC">
+              <MappingFragment StoreEntitySet="DANTOC">
+                <ScalarProperty Name="DT_MA" ColumnName="DT_MA" />
+                <ScalarProperty Name="DT_TEN" ColumnName="DT_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HINHTHUCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.HINHTHUC">
+              <MappingFragment StoreEntitySet="HINHTHUC">
+                <ScalarProperty Name="HT_MA" ColumnName="HT_MA" />
+                <ScalarProperty Name="HT_TEN" ColumnName="HT_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOCKies">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.HOCKY">
+              <MappingFragment StoreEntitySet="HOCKY">
+                <ScalarProperty Name="HK_MA" ColumnName="HK_MA" />
+                <ScalarProperty Name="HK_TEN" ColumnName="HK_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOCSINHs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.HOCSINH">
+              <MappingFragment StoreEntitySet="HOCSINH">
+                <ScalarProperty Name="HS_MA" ColumnName="HS_MA" />
+                <ScalarProperty Name="HS_HOTEN" ColumnName="HS_HOTEN" />
+                <ScalarProperty Name="HS_GIOITINH" ColumnName="HS_GIOITINH" />
+                <ScalarProperty Name="HS_NGAYSINH" ColumnName="HS_NGAYSINH" />
+                <ScalarProperty Name="HS_TONGIAO" ColumnName="HS_TONGIAO" />
+                <ScalarProperty Name="TINHTHANH_TT_MA" ColumnName="TINHTHANH_TT_MA" />
+                <ScalarProperty Name="XAPHUONG_XP_MA" ColumnName="XAPHUONG_XP_MA" />
+                <ScalarProperty Name="KYLUAT_KL_MA" ColumnName="KYLUAT_KL_MA" />
+                <ScalarProperty Name="KHENTHUONG_KT_MA" ColumnName="KHENTHUONG_KT_MA" />
+                <ScalarProperty Name="QUANHUYEN_QH_MA" ColumnName="QUANHUYEN_QH_MA" />
+                <ScalarProperty Name="DANTOC_DT_MA" ColumnName="DANTOC_DT_MA" />
+                <ScalarProperty Name="LOP_LOP_MA" ColumnName="LOP_LOP_MA" />
+                <ScalarProperty Name="KHOI_KHOI_MA" ColumnName="KHOI_KHOI_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHENTHUONGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.KHENTHUONG">
+              <MappingFragment StoreEntitySet="KHENTHUONG">
+                <ScalarProperty Name="KT_MA" ColumnName="KT_MA" />
+                <ScalarProperty Name="KT_THANHTICH" ColumnName="KT_THANHTICH" />
+                <ScalarProperty Name="KT_NGAYKHENTHUONG" ColumnName="KT_NGAYKHENTHUONG" />
+                <ScalarProperty Name="KT_GHICHU" ColumnName="KT_GHICHU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHENTHUONGCBs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.KHENTHUONGCB">
+              <MappingFragment StoreEntitySet="KHENTHUONGCB">
+                <ScalarProperty Name="KTCB_MA" ColumnName="KTCB_MA" />
+                <ScalarProperty Name="KTCB_NGAY" ColumnName="KTCB_NGAY" />
+                <ScalarProperty Name="KTCB_THANHTICH" ColumnName="KTCB_THANHTICH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHOIs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.KHOI">
+              <MappingFragment StoreEntitySet="KHOI">
+                <ScalarProperty Name="KHOI_MA" ColumnName="KHOI_MA" />
+                <ScalarProperty Name="KHOI_TEN" ColumnName="KHOI_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KYLUATs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.KYLUAT">
+              <MappingFragment StoreEntitySet="KYLUAT">
+                <ScalarProperty Name="KL_MA" ColumnName="KL_MA" />
+                <ScalarProperty Name="KL_HINHTHUC" ColumnName="KL_HINHTHUC" />
+                <ScalarProperty Name="KL_NGAYKYLUAT" ColumnName="KL_NGAYKYLUAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KYLUATCBs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.KYLUATCB">
+              <MappingFragment StoreEntitySet="KYLUATCB">
+                <ScalarProperty Name="KLCB_MA" ColumnName="KLCB_MA" />
+                <ScalarProperty Name="KLCB_NGAY" ColumnName="KLCB_NGAY" />
+                <ScalarProperty Name="KLCB_HT" ColumnName="KLCB_HT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOPs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.LOP">
+              <MappingFragment StoreEntitySet="LOP">
+                <ScalarProperty Name="LOP_MA" ColumnName="LOP_MA" />
+                <ScalarProperty Name="LOP_TEN" ColumnName="LOP_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MONHOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.MONHOC">
+              <MappingFragment StoreEntitySet="MONHOC">
+                <ScalarProperty Name="MH_MA" ColumnName="MH_MA" />
+                <ScalarProperty Name="MH_TEN" ColumnName="MH_TEN" />
+                <ScalarProperty Name="CHITIETDANHGIA_CTDG_MA" ColumnName="CHITIETDANHGIA_CTDG_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NAMHOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.NAMHOC">
+              <MappingFragment StoreEntitySet="NAMHOC">
+                <ScalarProperty Name="NH_MA" ColumnName="NH_MA" />
+                <ScalarProperty Name="NH_NAMHOC" ColumnName="NH_NAMHOC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NGACHLUONGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.NGACHLUONG">
+              <MappingFragment StoreEntitySet="NGACHLUONG">
+                <ScalarProperty Name="NL_MA" ColumnName="NL_MA" />
+                <ScalarProperty Name="NL_TEN" ColumnName="NL_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHONGHOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.PHONGHOC">
+              <MappingFragment StoreEntitySet="PHONGHOC">
+                <ScalarProperty Name="PH_MA" ColumnName="PH_MA" />
+                <ScalarProperty Name="PH_TEN" ColumnName="PH_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUANHUYENs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.QUANHUYEN">
+              <MappingFragment StoreEntitySet="QUANHUYEN">
+                <ScalarProperty Name="QH_MA" ColumnName="QH_MA" />
+                <ScalarProperty Name="QH_TEN" ColumnName="QH_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SODANHGIAs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.SODANHGIA">
+              <MappingFragment StoreEntitySet="SODANHGIA">
+                <ScalarProperty Name="SDG_MA" ColumnName="SDG_MA" />
+                <ScalarProperty Name="SDG_DIEM" ColumnName="SDG_DIEM" />
+                <ScalarProperty Name="SDG_GHICHU" ColumnName="SDG_GHICHU" />
+                <ScalarProperty Name="NAMHOC_NH_MA" ColumnName="NAMHOC_NH_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THIETBIDAYHOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THIETBIDAYHOC">
+              <MappingFragment StoreEntitySet="THIETBIDAYHOC">
+                <ScalarProperty Name="TBDH_MA" ColumnName="TBDH_MA" />
+                <ScalarProperty Name="TBDH_TEN" ColumnName="TBDH_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THIETBIGIANGDAYs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THIETBIGIANGDAY">
+              <MappingFragment StoreEntitySet="THIETBIGIANGDAY">
+                <ScalarProperty Name="TBGD_MA" ColumnName="TBGD_MA" />
+                <ScalarProperty Name="TBGD_TEN" ColumnName="TBGD_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THOIKHOABIEUx">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THOIKHOABIEU">
+              <MappingFragment StoreEntitySet="THOIKHOABIEU">
+                <ScalarProperty Name="TKB_MA" ColumnName="TKB_MA" />
+                <ScalarProperty Name="LOP_LOP_MA" ColumnName="LOP_LOP_MA" />
+                <ScalarProperty Name="MONHOC_MH_MA" ColumnName="MONHOC_MH_MA" />
+                <ScalarProperty Name="THU_THU_MA" ColumnName="THU_THU_MA" />
+                <ScalarProperty Name="TIETHOC_TH_MA" ColumnName="TIETHOC_TH_MA" />
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
+                <ScalarProperty Name="HOCKY_HK_MA" ColumnName="HOCKY_HK_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THONGTINDAOTAOs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THONGTINDAOTAO">
+              <MappingFragment StoreEntitySet="THONGTINDAOTAO">
+                <ScalarProperty Name="TTDT_MA" ColumnName="TTDT_MA" />
+                <ScalarProperty Name="HINHTHUCs_HT_MA" ColumnName="HINHTHUCs_HT_MA" />
+                <ScalarProperty Name="CHUYENNGANH_CN_MA" ColumnName="CHUYENNGANH_CN_MA" />
+                <ScalarProperty Name="VANBANG_VB_MA" ColumnName="VANBANG_VB_MA" />
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THONGTINLUONGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THONGTINLUONG">
+              <MappingFragment StoreEntitySet="THONGTINLUONG">
+                <ScalarProperty Name="TTL_MA" ColumnName="TTL_MA" />
+                <ScalarProperty Name="TTL_NGAYNHANLUONG" ColumnName="TTL_NGAYNHANLUONG" />
+                <ScalarProperty Name="TTL_HESOLUONG" ColumnName="TTL_HESOLUONG" />
+                <ScalarProperty Name="BACLUONG_BL_MA" ColumnName="BACLUONG_BL_MA" />
+                <ScalarProperty Name="NGACHLUONG_NL_MA" ColumnName="NGACHLUONG_NL_MA" />
+                <ScalarProperty Name="CANBO_CB_MA" ColumnName="CANBO_CB_MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THUs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.THU">
+              <MappingFragment StoreEntitySet="THU">
+                <ScalarProperty Name="THU_MA" ColumnName="THU_MA" />
+                <ScalarProperty Name="THU_TEN" ColumnName="THU_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIETHOCs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.TIETHOC">
+              <MappingFragment StoreEntitySet="TIETHOC">
+                <ScalarProperty Name="TH_MA" ColumnName="TH_MA" />
+                <ScalarProperty Name="TH_TEN" ColumnName="TH_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TINHTHANHs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.TINHTHANH">
+              <MappingFragment StoreEntitySet="TINHTHANH">
+                <ScalarProperty Name="TT_MA" ColumnName="TT_MA" />
+                <ScalarProperty Name="TT_TEN" ColumnName="TT_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TINHTRANGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.TINHTRANG">
+              <MappingFragment StoreEntitySet="TINHTRANG">
+                <ScalarProperty Name="TT_MA" ColumnName="TT_MA" />
+                <ScalarProperty Name="TT_MOTA" ColumnName="TT_MOTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UpdateImages">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.UpdateImage">
+              <MappingFragment StoreEntitySet="UpdateImages">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Image_url" ColumnName="Image_url" />
+                <ScalarProperty Name="Name_im" ColumnName="Name_im" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VANBANGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.VANBANG">
+              <MappingFragment StoreEntitySet="VANBANG">
+                <ScalarProperty Name="VB_MA" ColumnName="VB_MA" />
+                <ScalarProperty Name="VB_TEN" ColumnName="VB_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="XAPHUONGs">
+            <EntityTypeMapping TypeName="acomptec_qlthptModel.XAPHUONG">
+              <MappingFragment StoreEntitySet="XAPHUONG">
+                <ScalarProperty Name="XP_MA" ColumnName="XP_MA" />
+                <ScalarProperty Name="XP_TEN" ColumnName="XP_TEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

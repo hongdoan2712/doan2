@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# IDE0058: Expression value is never used
+csharp_style_unused_value_expression_statement_preference = discard_variable:none
+
+# IDE0059: Unnecessary assignment of a value
+csharp_style_unused_value_assignment_preference = unused_local_variable:suggestion
+
+# IDE0044: Add readonly modifier
+dotnet_style_readonly_field = true:suggestion
