@@ -1,0 +1,82 @@
+﻿@model QLTHPT.Models.CANBO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CANBO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CB_HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_HOTEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CB_GIOITINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_GIOITINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CB_DIACHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_DIACHI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CB_NGAYSINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_NGAYSINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CB_CMND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB_CMND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COQUAN.CQ_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COQUAN.CQ_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHENTHUONGCB.KTCB_NGAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHENTHUONGCB.KTCB_NGAY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KYLUATCB.KLCB_NGAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KYLUATCB.KLCB_NGAY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CB_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

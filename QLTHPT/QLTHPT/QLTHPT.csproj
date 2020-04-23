@@ -141,6 +141,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CANBOesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\THUsController.cs" />
     <Compile Include="Controllers\TIETHOCsController.cs" />
@@ -570,6 +571,11 @@
     <Content Include="Views\THUs\Details.cshtml" />
     <Content Include="Views\THUs\Edit.cshtml" />
     <Content Include="Views\THUs\Index.cshtml" />
+    <Content Include="Views\CANBOes\Create.cshtml" />
+    <Content Include="Views\CANBOes\Delete.cshtml" />
+    <Content Include="Views\CANBOes\Details.cshtml" />
+    <Content Include="Views\CANBOes\Edit.cshtml" />
+    <Content Include="Views\CANBOes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

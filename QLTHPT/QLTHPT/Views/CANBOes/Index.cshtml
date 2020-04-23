@@ -1,0 +1,75 @@
+﻿@model IEnumerable<QLTHPT.Models.CANBO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CB_HOTEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CB_GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CB_DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CB_NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CB_CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COQUAN.CQ_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHENTHUONGCB.KTCB_NGAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KYLUATCB.KLCB_NGAY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CB_HOTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CB_GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CB_DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CB_NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CB_CMND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COQUAN.CQ_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHENTHUONGCB.KTCB_NGAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KYLUATCB.KLCB_NGAY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CB_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CB_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CB_MA })
+        </td>
+    </tr>
+}
+
+</table>
