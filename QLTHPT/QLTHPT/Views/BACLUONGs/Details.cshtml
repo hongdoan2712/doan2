@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.BACLUONG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BACLUONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BL_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BL_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BL_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

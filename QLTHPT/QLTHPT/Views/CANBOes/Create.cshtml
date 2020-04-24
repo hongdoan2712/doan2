@@ -4,101 +4,115 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>Tạo Mới</strong></h4>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>CANBO</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_MA, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_MA, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CB_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_HOTEN, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_HOTEN, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_HOTEN, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CB_HOTEN, "Họ Tên", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_HOTEN, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_HOTEN, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_GIOITINH, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_GIOITINH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_GIOITINH, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CB_GIOITINH, "Giới Tính", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_GIOITINH, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_GIOITINH, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_DIACHI, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_DIACHI, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_DIACHI, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CB_DIACHI, "Địa Chỉ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_DIACHI, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_DIACHI, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_NGAYSINH, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_NGAYSINH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_NGAYSINH, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CB_NGAYSINH, "Ngày Sinh", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_NGAYSINH, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_NGAYSINH, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.CB_CMND, "CMND", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CB_CMND, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CB_CMND, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CB_CMND, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CB_CMND, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CB_CMND, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.COQUAN_CQ_MA, "Cơ Quan", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("COQUAN_CQ_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.COQUAN_CQ_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.COQUAN_CQ_MA, "COQUAN_CQ_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("COQUAN_CQ_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.COQUAN_CQ_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.KYLUATCB_KLCB_MA, "Kỷ Luật", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("KYLUATCB_KLCB_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.KYLUATCB_KLCB_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.KYLUATCB_KLCB_MA, "KYLUATCB_KLCB_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("KYLUATCB_KLCB_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.KYLUATCB_KLCB_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.KHENTHUONGCB_KTCB_MA, "Khen Thưởng", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("KHENTHUONGCB_KTCB_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.KHENTHUONGCB_KTCB_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.KHENTHUONGCB_KTCB_MA, "KHENTHUONGCB_KTCB_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("KHENTHUONGCB_KTCB_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.KHENTHUONGCB_KTCB_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Tạo" class="btn btn-default" /> |
+                                            <a href="@Url.Action("Index", "CANBOes")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

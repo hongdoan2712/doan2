@@ -1,0 +1,39 @@
+﻿@model IEnumerable<QLTHPT.Models.MONHOC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MH_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MH_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MH_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MH_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MH_MA })
+        </td>
+    </tr>
+}
+
+</table>

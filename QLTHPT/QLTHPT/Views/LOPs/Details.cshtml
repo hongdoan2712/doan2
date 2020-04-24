@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.LOP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LOP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LOP_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LOP_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

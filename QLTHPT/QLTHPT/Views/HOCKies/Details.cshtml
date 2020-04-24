@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.HOCKY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOCKY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HK_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HK_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HK_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

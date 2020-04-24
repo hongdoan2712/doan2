@@ -1,0 +1,34 @@
+﻿@model QLTHPT.Models.KYLUAT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KYLUAT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KL_HINHTHUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KL_HINHTHUC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KL_NGAYKYLUAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KL_NGAYKYLUAT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KL_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

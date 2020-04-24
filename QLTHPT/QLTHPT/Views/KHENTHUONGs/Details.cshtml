@@ -1,0 +1,42 @@
+﻿@model QLTHPT.Models.KHENTHUONG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KHENTHUONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_THANHTICH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_THANHTICH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_NGAYKHENTHUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_NGAYKHENTHUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_GHICHU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KT_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

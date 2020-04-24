@@ -1,0 +1,48 @@
+﻿@model QLTHPT.Models.KHENTHUONG
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>KHENTHUONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_THANHTICH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_THANHTICH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_NGAYKHENTHUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_NGAYKHENTHUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_GHICHU)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

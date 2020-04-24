@@ -1,0 +1,66 @@
+﻿@model QLTHPT.Models.THOIKHOABIEU
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>THOIKHOABIEU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CANBO.CB_HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCKY.HK_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCKY.HK_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOP.LOP_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP.LOP_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONHOC.MH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.MH_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THU.THU_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THU.THU_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIETHOC.TH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIETHOC.TH_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TKB_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

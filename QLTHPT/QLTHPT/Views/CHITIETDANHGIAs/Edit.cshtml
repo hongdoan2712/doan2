@@ -1,0 +1,74 @@
+﻿@model QLTHPT.Models.CHITIETDANHGIA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>Chỉnh Sửa</strong></h4>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    @Html.HiddenFor(model => model.CTDG_MA)
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CTDG_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CTDG_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CTDG_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CTDG_NGAYDG, "Ngày Đánh Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.CTDG_NGAYDG, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CTDG_NGAYDG, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.SODANHGIA_SDG_MA, "Sổ Đánh Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("SODANHGIA_SDG_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.SODANHGIA_SDG_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.HOCSINH_HS_MA, "Học Sinh", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("HOCSINH_HS_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.HOCSINH_HS_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Lưu" class="btn btn-default" /> |
+                                            <a href="@Url.Action("Index", "CHITIETDANHGIAs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

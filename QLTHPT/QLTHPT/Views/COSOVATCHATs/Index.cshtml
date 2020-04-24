@@ -1,0 +1,57 @@
+﻿@model IEnumerable<QLTHPT.Models.COSOVATCHAT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CSVC_SOLUONG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONGHOC.PH_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THIETBIDAYHOC.TBDH_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TINHTRANG.TT_MOTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CSVC_SOLUONG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONGHOC.PH_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THIETBIDAYHOC.TBDH_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THIETBIGIANGDAY.TBGD_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TINHTRANG.TT_MOTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CSVC_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CSVC_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CSVC_MA })
+        </td>
+    </tr>
+}
+
+</table>

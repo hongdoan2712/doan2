@@ -1,0 +1,63 @@
+﻿@model IEnumerable<QLTHPT.Models.THOIKHOABIEU>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CANBO.CB_HOTEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOCKY.HK_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP.LOP_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MONHOC.MH_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THU.THU_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIETHOC.TH_TEN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOCKY.HK_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP.LOP_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MONHOC.MH_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THU.THU_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIETHOC.TH_TEN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TKB_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TKB_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TKB_MA })
+        </td>
+    </tr>
+}
+
+</table>

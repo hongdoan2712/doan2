@@ -1,0 +1,66 @@
+﻿@model QLTHPT.Models.CHITIETDANHGIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sparkline13-list shadow-reset">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            <h4>
+                                <strong>
+                                    Chi Tiết
+                                </strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="sparkline10-graph">
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Mã Chi Tiết Đánh Giá:
+                                        </th>
+                                        <th>
+                                            Ngày Đánh Giá:
+                                        </th>
+                                        <th>
+                                            Sổ Đánh Giá:
+                                        </th>
+                                        <th>
+                                            Học Sinh:
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => model.CTDG_MA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.CTDG_NGAYDG)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.SODANHGIA.SDG_DIEM)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.HOCSINH.HS_HOTEN)
+                                        </td>
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    <a href="@Url.Action("Edit", "CHITIETDANHGIAs", new { id = Model.CTDG_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "CHITIETDANHGIAs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+</p>

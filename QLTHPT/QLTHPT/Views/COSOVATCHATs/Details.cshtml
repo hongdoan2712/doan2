@@ -1,0 +1,58 @@
+﻿@model QLTHPT.Models.COSOVATCHAT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>COSOVATCHAT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CSVC_SOLUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSVC_SOLUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONGHOC.PH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONGHOC.PH_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THIETBIDAYHOC.TBDH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THIETBIDAYHOC.TBDH_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TINHTRANG.TT_MOTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANG.TT_MOTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CSVC_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

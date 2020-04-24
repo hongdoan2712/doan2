@@ -1,0 +1,90 @@
+﻿@model QLTHPT.Models.THONGTINLUONG
+
+@{
+    ViewBag.Title = "Create";
+}
+
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>Tạo Mới</strong></h4>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.TTL_MA, "Mã ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.TTL_MA, new { htmlAttributes = new { @class = "form-control" }, @readonly = "readonly" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.TTL_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.TTL_NGAYNHANLUONG, "Ngày Nhận Lương", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.TTL_NGAYNHANLUONG, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.TTL_NGAYNHANLUONG, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.TTL_HESOLUONG, "Hệ Số Lương", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.TTL_HESOLUONG, new { htmlAttributes = new { @class = "form-control" } })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.TTL_HESOLUONG, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.BACLUONG_BL_MA, "Bậc Lương", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("BACLUONG_BL_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.BACLUONG_BL_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.NGACHLUONG_NL_MA, "Ngạch Lương", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("NGACHLUONG_NL_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.NGACHLUONG_NL_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.CANBO_CB_MA, "Cán Bộ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("CANBO_CB_MA", null, htmlAttributes: new { @class = "form-control" })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.CANBO_CB_MA, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Tạo" class="btn btn-default" /> |
+                                            <a href="@Url.Action("Index", "THONGTINLUONGs", new { id = ViewBag.CanBo.CB_MA})" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.THIETBIGIANGDAY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>THIETBIGIANGDAY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBGD_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBGD_TEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TBGD_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

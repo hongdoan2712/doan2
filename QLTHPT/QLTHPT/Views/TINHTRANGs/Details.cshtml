@@ -1,0 +1,26 @@
+﻿@model QLTHPT.Models.TINHTRANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TINHTRANG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TT_MOTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TT_MOTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TT_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

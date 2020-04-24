@@ -1,0 +1,99 @@
+﻿@model IEnumerable<QLTHPT.Models.HOCSINH>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HS_HOTEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HS_GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HS_NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HS_TONGIAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DANTOC.DT_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHENTHUONG.KT_THANHTICH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHOI.KHOI_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KYLUAT.KL_HINHTHUC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP.LOP_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUANHUYEN.QH_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TINHTHANH.TT_TEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.XAPHUONG.XP_TEN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HS_HOTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HS_GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HS_NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HS_TONGIAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DANTOC.DT_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHENTHUONG.KT_THANHTICH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHOI.KHOI_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KYLUAT.KL_HINHTHUC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP.LOP_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUANHUYEN.QH_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TINHTHANH.TT_TEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XAPHUONG.XP_TEN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HS_MA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HS_MA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HS_MA })
+        </td>
+    </tr>
+}
+
+</table>

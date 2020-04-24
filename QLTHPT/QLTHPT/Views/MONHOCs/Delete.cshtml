@@ -1,0 +1,40 @@
+﻿@model QLTHPT.Models.MONHOC
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MONHOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MH_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

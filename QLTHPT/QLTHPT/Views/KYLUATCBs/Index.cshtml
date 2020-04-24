@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QLTHPT.Models.KYLUATCB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>KỶ LUẬT CÁN BỘ</strong></h4>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <div id="toolbar">
+                                    <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
+                                </div>
+                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Mã
+                                            </th>
+                                            <th>
+                                                Ngày Kỷ Luật
+                                            </th>
+                                            <th>
+                                                Hình Thức
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.KLCB_MA)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.KLCB_NGAY)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.KLCB_HT)
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "KYLUATCBs", new { id = item.KLCB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "KYLUATCBs", new { id = item.KLCB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "KYLUATCBs", new { id = item.KLCB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

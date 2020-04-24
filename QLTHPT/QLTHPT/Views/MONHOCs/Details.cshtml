@@ -1,0 +1,34 @@
+﻿@model QLTHPT.Models.MONHOC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MONHOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MH_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MH_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MH_MA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

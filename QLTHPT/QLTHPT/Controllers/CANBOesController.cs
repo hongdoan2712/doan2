@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using QLTHPT.App_Start;
 using QLTHPT.Models;
 
 namespace QLTHPT.Controllers
@@ -40,9 +41,11 @@ namespace QLTHPT.Controllers
         public ActionResult Create()
         {
             ViewBag.COQUAN_CQ_MA = new SelectList(db.COQUANs, "CQ_MA", "CQ_TEN");
-            ViewBag.KHENTHUONGCB_KTCB_MA = new SelectList(db.KHENTHUONGCBs, "KTCB_MA", "KTCB_NGAY");
-            ViewBag.KYLUATCB_KLCB_MA = new SelectList(db.KYLUATCBs, "KLCB_MA", "KLCB_NGAY");
-            return View();
+            ViewBag.KHENTHUONGCB_KTCB_MA = new SelectList(db.KHENTHUONGCBs, "KTCB_MA", "KTCB_THANHTICH");
+            ViewBag.KYLUATCB_KLCB_MA = new SelectList(db.KYLUATCBs, "KLCB_MA", "KLCB_HT");
+            CANBO obj = new CANBO();
+            obj.CB_MA = CreateID.CreateID_ByteText();
+            return View(obj);
         }
 
         // POST: CANBOes/Create
@@ -52,13 +55,13 @@ namespace QLTHPT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CB_MA,CB_HOTEN,CB_GIOITINH,CB_DIACHI,CB_NGAYSINH,CB_CMND,COQUAN_CQ_MA,KYLUATCB_KLCB_MA,KHENTHUONGCB_KTCB_MA")] CANBO cANBO)
         {
+            
             if (ModelState.IsValid)
             {
                 db.CANBOes.Add(cANBO);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             ViewBag.COQUAN_CQ_MA = new SelectList(db.COQUANs, "CQ_MA", "CQ_TEN", cANBO.COQUAN_CQ_MA);
             ViewBag.KHENTHUONGCB_KTCB_MA = new SelectList(db.KHENTHUONGCBs, "KTCB_MA", "KTCB_NGAY", cANBO.KHENTHUONGCB_KTCB_MA);
             ViewBag.KYLUATCB_KLCB_MA = new SelectList(db.KYLUATCBs, "KLCB_MA", "KLCB_NGAY", cANBO.KYLUATCB_KLCB_MA);
@@ -138,3 +141,4 @@ namespace QLTHPT.Controllers
         }
     }
 }
+
