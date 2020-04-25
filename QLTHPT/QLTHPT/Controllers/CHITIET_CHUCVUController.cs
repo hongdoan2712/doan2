@@ -16,9 +16,10 @@ namespace QLTHPT.Controllers
         private acomptec_qlthptEntities db = new acomptec_qlthptEntities();
 
         // GET: CHITIET_CHUCVU
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            var cHITIET_CHUCVU = db.CHITIET_CHUCVU.Include(c => c.CANBO).Include(c => c.CHUCVU);
+            var cHITIET_CHUCVU = db.CHITIET_CHUCVU.Include(c => c.CANBO).Include(c => c.CHUCVU).Where(c => c.CHUCVU_CV_MA == id);
+            ViewBag.CV_MA = id;
             return View(cHITIET_CHUCVU.ToList());
         }
 
@@ -38,10 +39,11 @@ namespace QLTHPT.Controllers
         }
 
         // GET: CHITIET_CHUCVU/Create
-        public ActionResult Create()
+        public ActionResult Create(string id)
         {
             ViewBag.CANBO_CB_MA = new SelectList(db.CANBOes, "CB_MA", "CB_HOTEN");
             ViewBag.CHUCVU_CV_MA = new SelectList(db.CHUCVUs, "CV_MA", "CV_TEN");
+            ViewBag.CHUCVU = db.CHUCVUs.FirstOrDefault(cv => cv.CV_MA == id);
             return View();
         }
 
@@ -52,16 +54,17 @@ namespace QLTHPT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CT_CV_ID,CHUCVU_CV_MA,CANBO_CB_MA")] CHITIET_CHUCVU cHITIET_CHUCVU)
         {
+            string duongdan = "Index/" + cHITIET_CHUCVU.CHUCVU_CV_MA;
             if (ModelState.IsValid)
             {
                 db.CHITIET_CHUCVU.Add(cHITIET_CHUCVU);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(duongdan);
             }
 
             ViewBag.CANBO_CB_MA = new SelectList(db.CANBOes, "CB_MA", "CB_HOTEN", cHITIET_CHUCVU.CANBO_CB_MA);
             ViewBag.CHUCVU_CV_MA = new SelectList(db.CHUCVUs, "CV_MA", "CV_TEN", cHITIET_CHUCVU.CHUCVU_CV_MA);
-            return View(cHITIET_CHUCVU);
+            return View(duongdan);
         }
 
         // GET: CHITIET_CHUCVU/Edit/5

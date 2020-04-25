@@ -44,6 +44,7 @@
                                                     @Html.DisplayFor(modelItem => item.CV_TEN)
                                                 </td>
                                                 <td>
+                                                    <a href="@Url.Action("Index", "CHITIET_CHUCVU", new { id = item.CV_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Details", "CHUCVUs", new { id = item.CV_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Edit", "CHUCVUs", new { id = item.CV_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
                                                     <a href="@Url.Action("Delete", "CHUCVUs", new { id = item.CV_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>

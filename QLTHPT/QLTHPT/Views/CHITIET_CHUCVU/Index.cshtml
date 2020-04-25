@@ -17,7 +17,7 @@
                         <div class="sparkline13-graph">
                             <div class="datatable-dashv1-list custom-datatable-overright">
                                 <div id="toolbar">
-                                    <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
+                                    <strong>@Html.ActionLink("Tạo Mới", "Create", new { id = ViewBag.CV_MA })</strong>
                                 </div>
                                 <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                     <thead>
@@ -44,10 +44,10 @@
                                                     @Html.DisplayFor(modelItem => item.CT_CV_ID)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.CHUCVU_CV_MA)
+                                                    @Html.DisplayFor(modelItem => item.CHUCVU.CV_TEN)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.CANBO_CB_MA)
+                                                    @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
                                                 </td>
                                                 <td>
 
