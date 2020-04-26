@@ -376,9 +376,13 @@
     <Content Include="Asset\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Asset\img\clear.png" />
     <Content Include="Asset\img\cropper\1.jpg" />
+    <Content Include="Asset\img\edit1.jpg" />
     <Content Include="Asset\img\favicon.ico" />
     <Content Include="Asset\img\googlemap\1.png" />
     <Content Include="Asset\img\green1.png" />
+    <Content Include="Asset\img\images %287%29.jpg" />
+    <Content Include="Asset\img\images %288%29.jpg" />
+    <Content Include="Asset\img\images %289%29.jpg" />
     <Content Include="Asset\img\loading.gif" />
     <Content Include="Asset\img\logo\log.png" />
     <Content Include="Asset\img\logo\logo.png" />
@@ -393,6 +397,7 @@
     <Content Include="Asset\img\notification\5.jpg" />
     <Content Include="Asset\img\notification\6.jpg" />
     <Content Include="Asset\img\profile\1.jpg" />
+    <Content Include="Asset\img\tải xuống %282%29.jpg" />
     <Content Include="Asset\js\bootstrap-datetimepicker.js" />
     <Content Include="Asset\js\bootstrap-editable.js" />
     <Content Include="Asset\js\bootstrap.min.js" />
