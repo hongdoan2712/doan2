@@ -4,63 +4,85 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sparkline13-list shadow-reset">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            <h4>
+                                <strong>
+                                    Chi Tiết
+                                </strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="sparkline10-graph">
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Mã TKB
+                                        </th>
+                                        <th>
+                                            Cán Bộ
+                                        </th>
+                                        <th>
+                                            Học Kỳ
+                                        </th>
+                                        <th>
+                                            Lớp
+                                        </th>
+                                        <th>
+                                            Môn Học
+                                        </th>
+                                        <th>
+                                            Thứ
+                                        </th>
+                                        <th>
+                                            Tiết Học
+                                        </th>
+                                        <th style="width: 15.9%;" data-field="5" tabindex="0">
+                                            <div class="th-inner ">
+                                            </div><div class="fht-cell"></div>
+                                        </th>
+                                    </tr>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(model => model.TKB_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.CANBO_CB_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.HOCKY_HK_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.LOP_LOP_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.MONHOC_MH_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.THU_THU_MA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.TIETHOC_TH_MA)
+                                    </td>                                   
+                                </tr>
+                                </thead>
 
-<div>
-    <h4>THOIKHOABIEU</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CANBO.CB_HOTEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CANBO.CB_HOTEN)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HOCKY.HK_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HOCKY.HK_TEN)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LOP.LOP_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LOP.LOP_TEN)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MONHOC.MH_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MONHOC.MH_TEN)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.THU.THU_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.THU.THU_TEN)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TIETHOC.TH_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TIETHOC.TH_TEN)
-        </dd>
-
-    </dl>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TKB_MA }) |
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Edit", "THOIKHOABIEUx", new { id = Model.TKB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a> |
+    <a href="@Url.Action("Index", "THOIKHOABIEUx")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
 </p>

@@ -4,36 +4,71 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>MÔN HỌC</strong></h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MH_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CHITIETDANHGIA.SODANHGIA_SDG_MA)
-        </th>
-        <th></th>
-    </tr>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <div id="toolbar">
+                                    <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MH_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CHITIETDANHGIA.SODANHGIA_SDG_MA)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MH_MA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MH_MA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MH_MA })
-        </td>
-    </tr>
-}
+                                </div>
+                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Mã
+                                            </th>
+                                            <th>
+                                                Tên
+                                            </th>
+                                            <th>
+                                                CTDG
+                                            </th>                                        
+                                            <th style="width: 15.9%;" data-field="5" tabindex="0">
+                                                <div class="th-inner ">
+                                                </div><div class="fht-cell"></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-</table>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.MH_MA)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.MH_TEN)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CHITIETDANHGIA_CTDG_MA)
+                                                </td>
+                                                
+                                                <td>
+                                                    <a href="@Url.Action("Details", "MONHOCs", new { id = item.MH_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "MONHOCs", new { id = item.MH_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "MONHOCs", new { id = item.MH_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

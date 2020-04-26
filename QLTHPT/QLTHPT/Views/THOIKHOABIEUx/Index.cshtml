@@ -4,60 +4,94 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sparkline13-list shadow-reset">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            <h4><strong>THỜI KHÓA BIỂU</strong></h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CANBO.CB_HOTEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HOCKY.HK_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LOP.LOP_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MONHOC.MH_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.THU.THU_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TIETHOC.TH_TEN)
-        </th>
-        <th></th>
-    </tr>
+                        </div>
+                    </div>
+                    <div class="sparkline13-graph">
+                        <div class="datatable-dashv1-list custom-datatable-overright">
+                            <div id="toolbar">
+                                <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HOCKY.HK_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOP.LOP_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MONHOC.MH_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.THU.THU_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TIETHOC.TH_TEN)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TKB_MA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TKB_MA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TKB_MA })
-        </td>
-    </tr>
-}
+                            </div>
+                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Mã TKB
+                                        </th>
+                                        <th>
+                                            Cán Bộ
+                                        </th>
+                                        <th>
+                                            Học Kỳ
+                                        </th>
+                                        <th>
+                                            Lớp
+                                        </th>
+                                        <th>
+                                            Môn Học
+                                        </th>
+                                        <th>
+                                            Thứ
+                                        </th>
+                                        <th>
+                                            Tiết Học
+                                        </th>
+                                        <th style="width: 15.9%;" data-field="5" tabindex="0">
+                                            <div class="th-inner ">
+                                            </div><div class="fht-cell"></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-</table>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TKB_MA)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.CANBO.CB_HOTEN)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.HOCKY.HK_TEN)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.LOP.LOP_TEN)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MONHOC.MH_TEN)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TIETHOC.TH_TEN)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.THU.THU_TEN)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("Details", "THOIKHOABIEUx", new { id = item.TKB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Edit", "THOIKHOABIEUx", new { id = item.TKB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="@Url.Action("Delete", "THOIKHOABIEUx", new { id = item.TKB_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
