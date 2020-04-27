@@ -4,37 +4,64 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sparkline13-list shadow-reset">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            <h4>
+                                <strong>
+                                    Xóa Kỷ Luật
+                                </strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <h5>Bạn có chắc muốn xóa ?</h5>
+                    <div class="sparkline10-graph">
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Mã
+                                        </th>
+                                        <th>
+                                            Hình Thức
+                                        </th>
+                                        <th>
+                                            Ngày Kỷ Luật
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => model.KL_MA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.KL_HINHTHUC)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.KL_NGAYKYLUAT)
+                                        </td>
+                                    </tr>
+                                </thead>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>KYLUAT</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.KL_HINHTHUC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.KL_HINHTHUC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.KL_NGAYKYLUAT)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.KL_NGAYKYLUAT)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    }
+    </div>
 </div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Xóa" class="btn btn-default" /> |
+        <a href="@Url.Action("Index", "KYLUATs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    </div>
+}
