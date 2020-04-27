@@ -4,54 +4,76 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>CƠ SỞ VẬT CHẤT</strong></h4>
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <div id="toolbar">
+                                    <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CSVC_SOLUONG)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PHONGHOC.PH_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.THIETBIDAYHOC.TBDH_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.THIETBIGIANGDAY.TBGD_TEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TINHTRANG.TT_MOTA)
-        </th>
-        <th></th>
-    </tr>
+                                </div>
+                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Mã
+                                            </th>
+                                            <th>
+                                                Thiết Bị Dạy Học
+                                            </th>
+                                            <th>
+                                                Thiết Bị Giảng Dạy
+                                            </th>
+                                            <th>
+                                                Mô Tả
+                                            </th>
+                                            <th>
+                                                Tùy Chọn
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CSVC_SOLUONG)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PHONGHOC.PH_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.THIETBIDAYHOC.TBDH_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.THIETBIGIANGDAY.TBGD_TEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TINHTRANG.TT_MOTA)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CSVC_MA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CSVC_MA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CSVC_MA })
-        </td>
-    </tr>
-}
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CSVC_MA)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.THIETBIDAYHOC.TBDH_TEN)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.THIETBIGIANGDAY.TBGD_TEN)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.TINHTRANG.TT_MOTA)
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "COSOVATCHATs", new { id = item.CSVC_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                    <a href="@Url.Action("Edit", "COSOVATCHATs", new { id = item.CSVC_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="@Url.Action("Delete", "COSOVATCHATs", new { id = item.CSVC_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
 
-</table>
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

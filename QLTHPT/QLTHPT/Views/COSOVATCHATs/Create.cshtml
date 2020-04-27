@@ -4,77 +4,89 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+    <div class="data-table-area mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sparkline13-list shadow-reset">
+                        <div class="sparkline13-hd">
+                            <div class="main-sparkline13-hd">
+                                <h4><strong>Tạo Mới</strong></h4>
 
+                            </div>
+                        </div>
+                        <div class="sparkline13-graph">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>COSOVATCHAT</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.CSVC_MA, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CSVC_MA, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CSVC_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                            <div class="form-horizontal">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.CSVC_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.CSVC_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.CSVC_MA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CSVC_SOLUONG, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CSVC_SOLUONG, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CSVC_SOLUONG, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.THIETBIDAYHOC_TBDH_MA, "Thiết Bị Dạy Học", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.THIETBIDAYHOC_TBDH_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.THIETBIDAYHOC_TBDH_MA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PHONGHOC_PH_MA, "PHONGHOC_PH_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("PHONGHOC_PH_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.PHONGHOC_PH_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.THIETBIGIANGDAY_TBGD_MA, "Thiết Bị Giảng Dạy", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.THIETBIGIANGDAY_TBGD_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.THIETBIGIANGDAY_TBGD_MA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.THIETBIGIANGDAY_TBGD_MA, "THIETBIGIANGDAY_TBGD_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("THIETBIGIANGDAY_TBGD_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.THIETBIGIANGDAY_TBGD_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.PHONGHOC_PH_MA, "Phòng Học", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.PHONGHOC_PH_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.PHONGHOC_PH_MA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.THIETBIDAYHOC_TBDH_MA, "THIETBIDAYHOC_TBDH_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("THIETBIDAYHOC_TBDH_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.THIETBIDAYHOC_TBDH_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.CSVC_SOLUONG, "Số Lượng", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.CSVC_SOLUONG, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.CSVC_SOLUONG, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TINHTRANG_TT_MA, "TINHTRANG_TT_MA", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("TINHTRANG_TT_MA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.TINHTRANG_TT_MA, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <div class="form-group-inner">
+                                    @Html.LabelFor(model => model.TINHTRANG_TT_MA, "Tình Trạng", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.TINHTRANG_TT_MA, new { htmlAttributes = new { @class = "form-control" } })
+                                        <br />
+                                        @Html.ValidationMessageFor(model => model.TINHTRANG_TT_MA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Tạo" class="btn btn-default" /> |
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                                        <a href="@Url.Action("Index", "COSOVATCHATs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
