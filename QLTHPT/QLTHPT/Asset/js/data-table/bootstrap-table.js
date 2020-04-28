@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * version: 1.11.1
  * https://github.com/wenzhixin/bootstrap-table/
@@ -467,16 +467,16 @@
             return 'Loading, please wait...';
         },
         formatRecordsPerPage: function (pageNumber) {
-            return sprintf('%s rows per page', pageNumber);
+            return sprintf('%s dòng trên trang', pageNumber);
         },
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
-            return sprintf('Showing %s to %s of %s rows', pageFrom, pageTo, totalRows);
+            return sprintf('Từ %s đến %s của %s dòng', pageFrom, pageTo, totalRows);
         },
         formatDetailPagination: function (totalRows) {
-            return sprintf('Showing %s rows', totalRows);
+            return sprintf('Từ %s dòng', totalRows);
         },
         formatSearch: function () {
-            return 'Search';
+            return 'Tìm kiếm';
         },
         formatNoMatches: function () {
             return 'No matching records found';
