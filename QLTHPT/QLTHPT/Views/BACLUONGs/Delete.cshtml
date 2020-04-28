@@ -4,29 +4,58 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sparkline13-list shadow-reset">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            <h4>
+                                <strong>
+                                    Xóa
+                                </strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <h5>Bạn có chắc muốn xóa ?</h5>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>BACLUONG</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BL_TEN)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BL_TEN)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                    <div class="sparkline10-graph">
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Mã
+                                        </th>
+                                        <th>
+                                            Tên
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => model.BL_MA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.BL_TEN)
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    }
+    </div>
 </div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Xóa" class="btn btn-default" /> |
+        <a href="@Url.Action("Index", "BACLUONGs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+    </div>
+}
+
