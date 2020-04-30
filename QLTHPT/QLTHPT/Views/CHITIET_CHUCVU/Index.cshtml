@@ -19,10 +19,10 @@
                                 <div id="toolbar">
                                     <strong>@Html.ActionLink("Tạo Mới", "Create", new { id = ViewBag.CV_MA })</strong>
                                 </div>
-                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                <table id="table" data-resizable="false" data-toggle="table" data-pagination="true" data-search="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
-                                            <th>
+                                            <th data-width="100px">
                                                 Mã
                                             </th>
                                             <th>
@@ -31,8 +31,7 @@
                                             <th>
                                                 Cán Bộ
                                             </th>
-                                            <th>
-                                            </th>
+                                            <th data-width="200px"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
