@@ -42,8 +42,8 @@ namespace QLTHPT.Controllers
         {
             ViewBag.HOCSINH_HS_MA = new SelectList(db.HOCSINHs, "HS_MA", "HS_HOTEN");
             ViewBag.SODANHGIA_SDG_MA = new SelectList(db.SODANHGIAs, "SDG_MA", "SDG_DIEM");
-            CANBO obj = new CANBO();
-            obj.CB_MA = CreateID.CreateID_ByteText();
+            CHITIETDANHGIA obj = new CHITIETDANHGIA();
+            obj.CTDG_MA = CreateID.CreateID_ByteText();
             return View(obj);
         }
 
