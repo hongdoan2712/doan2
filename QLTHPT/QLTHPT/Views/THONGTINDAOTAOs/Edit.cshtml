@@ -22,53 +22,38 @@
                                 <div class="form-horizontal">
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     @Html.HiddenFor(model => model.TTDT_MA)
-                                    <div class="form-group-inner">
-                                        @Html.LabelFor(model => model.TTDT_MA, "Mã ", htmlAttributes: new { @class = "control-label col-md-2" })
-                                        <div class="col-md-10">
-                                            @Html.EditorFor(model => model.TTDT_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                                            <br />
-                                            @Html.ValidationMessageFor(model => model.TTDT_MA, "", new { @class = "text-danger" })
-                                        </div>
+                                    <div class="form-group-inner" style="text-align: left;">
+                                        @Html.LabelFor(model => model.TTDT_MA, "Mã ", htmlAttributes: new { @class = "control-label " })
+                                        @Html.EditorFor(model => model.TTDT_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.TTDT_MA, "", new { @class = "text-danger" })
                                     </div>
 
-                                    <div class="form-group-inner">
-                                        @Html.LabelFor(model => model.HINHTHUCs_HT_MA, "Hình Thức", htmlAttributes: new { @class = "control-label col-md-2" })
-                                        <div class="col-md-10">
-                                            @Html.DropDownList("HT_MA", null, htmlAttributes: new { @class = "form-control" })
-                                            <br />
-                                            @Html.ValidationMessageFor(model => model.HINHTHUCs_HT_MA, "", new { @class = "text-danger" })
-                                        </div>
+                                    <div class="form-group-inner" style="text-align: left;">
+                                        @Html.LabelFor(model => model.HINHTHUCs_HT_MA, "Hình Thức", htmlAttributes: new { @class = "control-label " })
+                                        @Html.DropDownList("HINHTHUCs_HT_MA", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.HINHTHUCs_HT_MA, "", new { @class = "text-danger" })
                                     </div>
 
-                                    <div class="form-group-inner">
-                                        @Html.LabelFor(model => model.CHUYENNGANH_CN_MA, "Chuyên Ngành", htmlAttributes: new { @class = "control-label col-md-2" })
-                                        <div class="col-md-10">
-                                            @Html.DropDownList("CHUYENNGANH_CN_MA", null, htmlAttributes: new { @class = "form-control" })
-                                            <br />
-                                            @Html.ValidationMessageFor(model => model.CHUYENNGANH_CN_MA, "", new { @class = "text-danger" })
-                                        </div>
+                                    <div class="form-group-inner" style="text-align: left;">
+                                        @Html.LabelFor(model => model.CHUYENNGANH_CN_MA, "Chuyên Ngành", htmlAttributes: new { @class = "control-label" })
+                                        @Html.DropDownList("CHUYENNGANH_CN_MA", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.CHUYENNGANH_CN_MA, "", new { @class = "text-danger" })
                                     </div>
 
-                                    <div class="form-group-inner">
-                                        @Html.LabelFor(model => model.VANBANG_VB_MA, "Văn Bằng", htmlAttributes: new { @class = "control-label col-md-2" })
-                                        <div class="col-md-10">
-                                            @Html.DropDownList("VANBANG_VB_MA", null, htmlAttributes: new { @class = "form-control" })
-                                            <br />
-                                            @Html.ValidationMessageFor(model => model.VANBANG_VB_MA, "", new { @class = "text-danger" })
-                                        </div>
+                                    <div class="form-group-inner" style="text-align: left;">
+                                        @Html.LabelFor(model => model.VANBANG_VB_MA, "Văn Bằng", htmlAttributes: new { @class = "control-label " })
+                                        @Html.DropDownList("VANBANG_VB_MA", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.VANBANG_VB_MA, "", new { @class = "text-danger" })
                                     </div>
 
-                                    <div class="form-group-inner">
-                                        @Html.LabelFor(model => model.CANBO_CB_MA, "Cán Bộ", htmlAttributes: new { @class = "control-label col-md-2" })
-                                        <div class="col-md-10">
-                                            @Html.DropDownList("CB_MA", null, htmlAttributes: new { @class = "form-control" })
-                                            <br />
-                                            @Html.ValidationMessageFor(model => model.CANBO_CB_MA, "", new { @class = "text-danger" })
-                                        </div>
+                                    <div class="form-group-inner" style="text-align: left;">
+                                        @Html.LabelFor(model => model.CANBO_CB_MA, "Cán Bộ", htmlAttributes: new { @class = "control-label" })
+                                        @Html.DropDownList("CANBO_CB_MA", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.CANBO_CB_MA, "", new { @class = "text-danger" })
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
+                                    <div class="form-group" style="text-align: left;">
+                                        <div style=" padding-left: 15px;">
                                             <input type="submit" value="Lưu" class="btn btn-default" /> |
                                             <a href="@Url.Action("Index", "THONGTINDAOTAOs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
                                         </div>
