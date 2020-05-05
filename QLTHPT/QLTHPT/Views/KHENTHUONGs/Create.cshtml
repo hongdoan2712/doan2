@@ -12,7 +12,6 @@
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
                             <h4><strong>Tạo Mới</strong></h4>
-
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -22,7 +21,7 @@
 
                         <div class="form-horizontal">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            <div class="form-group-inner">
+                            <div class="form-group-inner" style="text-align: left;">
                                 @Html.LabelFor(model => model.KT_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.KT_MA, new { htmlAttributes = new { @class = "form-control" }, @readonly = "readonly" })
@@ -30,7 +29,7 @@
                                     @Html.ValidationMessageFor(model => model.KT_MA, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-                            <div class="form-group-inner">
+                            <div class="form-group-inner" style="text-align: left;">
                                 @Html.LabelFor(model => model.KT_THANHTICH, "Thành Tích", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.KT_THANHTICH, new { htmlAttributes = new { @class = "form-control" } })
@@ -38,7 +37,7 @@
                                     @Html.ValidationMessageFor(model => model.KT_THANHTICH, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-                            <div class="form-group-inner">
+                            <div class="form-group-inner" style="text-align: left;">
                                 @Html.LabelFor(model => model.KT_NGAYKHENTHUONG, "Ngày Khen Thưởng", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.KT_NGAYKHENTHUONG, new { htmlAttributes = new { @class = "form-control" } })
@@ -46,7 +45,7 @@
                                     @Html.ValidationMessageFor(model => model.KT_NGAYKHENTHUONG, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-                            <div class="form-group-inner">
+                            <div class="form-group-inner" style="text-align: left;">
                                 @Html.LabelFor(model => model.KT_GHICHU, "Ghi Chú", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.KT_GHICHU, new { htmlAttributes = new { @class = "form-control" } })
@@ -54,13 +53,10 @@
                                     @Html.ValidationMessageFor(model => model.KT_GHICHU, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-
-                                    <input type="submit" value="Tạo" class="btn btn-default" /> |
-
+                            <div class="form-group" style="text-align: left;">
+                                <div style=" padding-left: 30px;">
+                                    <input type="submit" value="Tạo" class="btn btn-default" />
                                     <a href="@Url.Action("Index", "KHENTHUONGs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
-
                                 </div>
                             </div>
                         </div>

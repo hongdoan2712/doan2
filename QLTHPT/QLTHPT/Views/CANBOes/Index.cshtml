@@ -57,6 +57,7 @@
                                                     @Html.DisplayFor(modelItem => item.CB_CMND)
                                                 </td>
                                                 <td>
+                                                    <a href="@Url.Action("Index", "CHITIET_CHUCVU", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Index", "THONGTINLUONGs", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Index", "THONGTINDAOTAOs", new { id = item.CB_MA })" class="btn btn-custon-rounded-four btn-primary"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Details", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>

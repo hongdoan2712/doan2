@@ -22,37 +22,31 @@
                         <div class="form-horizontal">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             @Html.HiddenFor(model => model.KL_MA)
-                            <div class="form-group-inner">
-                                @Html.LabelFor(model => model.KL_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.KL_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                                    <br />
-                                    @Html.ValidationMessageFor(model => model.KL_MA, "", new { @class = "text-danger" })
+                            <div class="form-group-inner" style="text-align: left;">
+                                @Html.LabelFor(model => model.KL_MA, "Mã", htmlAttributes: new { @class = "control-label" })
+                                @Html.EditorFor(model => model.KL_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.KL_MA, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group-inner" style="text-align: left;">
+                                @Html.LabelFor(model => model.KL_HINHTHUC, "Hình Thức", htmlAttributes: new { @class = "control-label" })
+                                @Html.EditorFor(model => model.KL_HINHTHUC, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.KL_HINHTHUC, "", new { @class = "text-danger" })
+                            </div>
+                            
+                            <div class="form-group-inner" style="text-align: left;">
+                                @Html.LabelFor(model => model.KL_NGAYKYLUAT, "Ngày Kỷ Luật", htmlAttributes: new { @class = "control-label" })
+                                @Html.EditorFor(model => model.KL_NGAYKYLUAT, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.KL_NGAYKYLUAT, "", new { @class = "text-danger" })
+                            </div>
+
+                                <div class="form-group" style="text-align: left;">
+                                    <div style=" padding-left: 30px;">
+                                        <input type="submit" value="Lưu" class="btn btn-default" /> |
+                                        <a href="@Url.Action("Index", "KYLUATs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group-inner">
-                                @Html.LabelFor(model => model.KL_HINHTHUC, "Hình Thức", htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.KL_HINHTHUC, new { htmlAttributes = new { @class = "form-control" } })
-                                    <br />
-                                    @Html.ValidationMessageFor(model => model.KL_HINHTHUC, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="form-group-inner">
-                                @Html.LabelFor(model => model.KL_NGAYKYLUAT, "Ngày Kỷ Luật", htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.KL_NGAYKYLUAT, new { htmlAttributes = new { @class = "form-control" } })
-                                    <br />
-                                    @Html.ValidationMessageFor(model => model.KL_NGAYKYLUAT, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Lưu" class="btn btn-default" /> |
-                                    <a href="@Url.Action("Index", "KYLUATs")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
-                                </div>
-                            </div>
-                        </div>
                         }
                     </div>
                 </div>
