@@ -22,13 +22,13 @@
                                 <div class="form-horizontal">
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     <div class="form-group-inner" style="text-align: left;">
-                                        @Html.LabelFor(model => model.BL_MA, "Mã", htmlAttributes: new { @class = "control-label" })
+                                        @Html.LabelFor(model => model.BL_MA, "Mã Bậc Lương", htmlAttributes: new { @class = "control-label" })
                                         @Html.EditorFor(model => model.BL_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                                         @Html.ValidationMessageFor(model => model.BL_MA, "", new { @class = "text-danger" })
                                     </div>
 
                                     <div class="form-group-inner" style="text-align: left;">
-                                        @Html.LabelFor(model => model.BL_TEN, "Tên", htmlAttributes: new { @class = "control-label" })
+                                        @Html.LabelFor(model => model.BL_TEN, "Bậc Lương", htmlAttributes: new { @class = "control-label" })
                                         @Html.EditorFor(model => model.BL_TEN, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.BL_TEN, "", new { @class = "text-danger" })
                                     </div>
