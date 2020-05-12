@@ -19,7 +19,7 @@
                             <div id="toolbar">
                                 <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
                             </div>
-                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                            <table id="table" data-resizable="false" data-toggle="table" data-pagination="true" data-search="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
                                         <th>
@@ -34,32 +34,32 @@
                                         <th>
                                             Ghi Chú
                                         </th>
-                                        <th data-width="250px"></th>
+                                        <th data-width="150px"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                     @foreach (var item in Model)
                                     {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.KT_MA)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.KT_THANHTICH)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.KT_NGAYKHENTHUONG)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.KT_GHICHU)
-                                        </td>
-                                        <td>
-                                            <a href="@Url.Action("Details", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
-                                            <a href="@Url.Action("Edit", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
-                                            <a href="@Url.Action("Delete", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.KT_MA)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.KT_THANHTICH)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.KT_NGAYKHENTHUONG)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.KT_GHICHU)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("Details", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>
+                                                <a href="@Url.Action("Edit", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="@Url.Action("Delete", "KHENTHUONGs", new { id = item.KT_MA })" class="btn btn-custon-rounded-three btn-danger"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
                                     }
                                 </tbody>
                             </table>
