@@ -12,10 +12,6 @@
                         <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
                                 <h4><strong>Chỉnh Sửa</strong></h4>
-                                <div class="sparkline13-outline-icon">
-                                    <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                    <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                                </div>
                             </div>
                         </div>
                         <div class="sparkline13-graph">
@@ -26,10 +22,20 @@
                                 <div class="form-horizontal">
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     @Html.HiddenFor(model => model.TT_MA)
+<<<<<<< HEAD
                                     <div class="form-group-inner" style="text-align: left;">
                                         @Html.LabelFor(model => model.TT_MA, "Mã", htmlAttributes: new { @class = "control-label" })
                                         @Html.EditorFor(model => model.TT_MA, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                                         @Html.ValidationMessageFor(model => model.TT_MA, "", new { @class = "text-danger" })
+=======
+                                    <div class="form-group-inner">
+                                        @Html.LabelFor(model => model.TT_MA, "Mã", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.TT_MA, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly"} })
+                                            <br />
+                                            @Html.ValidationMessageFor(model => model.TT_MA, "", new { @class = "text-danger" })
+                                        </div>
+>>>>>>> aea83b21b016bd802a252eec818dfe4378004853
                                     </div>
                                 </div>
 
