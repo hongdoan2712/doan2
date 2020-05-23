@@ -19,7 +19,7 @@
                             <div id="toolbar">
                                 <strong>@Html.ActionLink("Tạo Mới", "Create", new { id = ViewBag.CB_MA })</strong>
                             </div>
-                            <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                            <table id="table" data-resizable="false" data-toggle="table" data-pagination="true" data-search="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
                                         <th>
@@ -37,7 +37,7 @@
                                         <th>
                                             Cán Bộ
                                         </th>
-                                        <th data-width="250px"></th>
+                                        <th data-width="150px"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -68,10 +68,14 @@
                                             </td>
                                         </tr>
                                     }
-
                                 </tbody>
                             </table>
-
+                            <br/>
+                            <div class="form-group" style="text-align: left;">
+                                <div style=" padding-left: 0px;">
+                                    <a href="@Url.Action("Index", "CANBOes")" class=" btn btn-custon-rounded-three btn-primary"><i class="fa fa-undo"></i></a>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
