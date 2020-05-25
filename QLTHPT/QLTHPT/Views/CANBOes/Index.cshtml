@@ -19,9 +19,8 @@
                             <div class="datatable-dashv1-list custom-datatable-overright">
                                 <div id="toolbar">
                                     <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
-
                                 </div>
-                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                <table id="table" data-resizable="false" data-toggle="table" data-pagination="true" data-search="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
                                             <th>
@@ -30,16 +29,13 @@
                                             <th>
                                                 Họ Tên
                                             </th>
-                                            <th>
+                                            <th data-width="200px">
                                                 Địa Chỉ
                                             </th>
-                                            <th>
+                                            <th data-width="200px">
                                                 CMND
                                             </th>
-                                            <th style="width: 15.9%;" data-field="5" tabindex="0">
-                                                <div class="th-inner ">
-                                                </div><div class="fht-cell"></div>
-                                            </th>
+                                            <th data-width="300px"> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -60,6 +56,7 @@
                                                     @Html.DisplayFor(modelItem => item.CB_CMND)
                                                 </td>
                                                 <td>
+                                                    <a href="@Url.Action("Index", "CHITIET_CHUCVU", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Index", "THONGTINLUONGs", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-warning"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Index", "THONGTINDAOTAOs", new { id = item.CB_MA })" class="btn btn-custon-rounded-four btn-primary"><i class="fa fa-info-circle"></i></a>
                                                     <a href="@Url.Action("Details", "CANBOes", new { id = item.CB_MA })" class="btn btn-custon-rounded-three btn-success"><i class="fa fa-info-circle"></i></a>

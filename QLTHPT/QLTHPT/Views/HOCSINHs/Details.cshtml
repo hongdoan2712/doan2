@@ -30,12 +30,6 @@
                                             Tên Học Sinh:
                                         </th>
                                         <th>
-                                            Lớp:
-                                        </th>
-                                        <th>
-                                            Khối:
-                                        </th>
-                                        <th>
                                             Giới Tính:
                                         </th>
                                         <th>
@@ -45,22 +39,28 @@
                                             Tôn Giáo:
                                         </th>
                                         <th>
+                                            Tỉnh Thành:
+                                        </th>
+                                        <th>
+                                            Xã Phường:
+                                        </th>
+                                        <th>
                                             Kỹ Luật:
                                         </th>
                                         <th>
                                             Khen Thưởng:
                                         </th>
                                         <th>
-                                            Tỉnh Thành:
-                                        </th>
-                                        <th>
                                             Quận Huyện:
                                         </th>
                                         <th>
-                                            Xã Phường:
+                                            Dân Tộc:
                                         </th>
                                         <th>
-                                            Dân Tộc:
+                                            Lớp:
+                                        </th>
+                                        <th>
+                                            Khối:
                                         </th>
                                     </tr>
                                     <tr>
@@ -69,12 +69,6 @@
                                         </td>
                                         <td>
                                             @Html.DisplayFor(model => model.HS_HOTEN)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(model => model.LOP_LOP_MA)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(model => model.KHOI_KHOI_MA)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(model => model.HS_GIOITINH)
@@ -86,22 +80,29 @@
                                             @Html.DisplayFor(model => model.HS_TONGIAO)
                                         </td>
                                         <td>
+                                            @Html.DisplayFor(model => model.TINHTHANH.TT_TEN)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.XAPHUONG.XP_TEN)
+                                        </td>
+                                        <td>
                                             @Html.DisplayFor(model => model.KYLUAT.KL_HINHTHUC)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(model => model.KHENTHUONG.KT_THANHTICH)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(model => model.TINHTHANH.TT_TEN)
-                                        </td>
-                                        <td>
                                             @Html.DisplayFor(model => model.QUANHUYEN.QH_TEN)
                                         </td>
-                                        <td>
-                                            @Html.DisplayFor(model => model.XAPHUONG.XP_TEN)
-                                        </td>
+
                                         <td>
                                             @Html.DisplayFor(model => model.DANTOC.DT_TEN)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.LOP_LOP_MA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.KHOI_KHOI_MA)
                                         </td>
                                     </tr>
                                 </thead>

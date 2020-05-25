@@ -20,19 +20,16 @@
                                 <div id="toolbar">
                                     <strong>@Html.ActionLink("Tạo Mới", "Create")</strong>
                                 </div>
-                                <table id="table" data-toggle="table" data-search="true" data-key-events="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                <table id="table" data-resizable="false" data-toggle="table" data-pagination="true" data-search="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
-                                            <th>
+                                            <th data-width="100px">
                                                 Mã
                                             </th>
                                             <th>
                                                 Tên
                                             </th>
-                                            <th style="width: 15.9%;" data-field="5" tabindex="0">
-                                                <div class="th-inner ">
-                                                </div><div class="fht-cell"></div>
-                                            </th>
+                                            <th data-width="150px"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
